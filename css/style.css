@@ -654,6 +654,7 @@
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
 }
 
 .transform-card:hover {
@@ -672,6 +673,41 @@
 
 .transform-card:hover .transform-image img {
     transform: scale(1.05);
+}
+
+.transform-content {
+    padding: 1.5rem;
+}
+
+.transform-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.transform-desc {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.transform-year {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.transform-link {
+    color: #2563eb;
+    font-weight: 500;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.transform-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
 }
 
 /* 联系卡片 */

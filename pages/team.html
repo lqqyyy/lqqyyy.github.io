@@ -20,15 +20,26 @@
                 
                 <!-- 桌面导航栏 -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="../index.html" class="nav-link">首页</a>
-                    <a href="research.html" class="nav-link">研究方向</a>
-                    <a href="team.html" class="nav-link active">团队成员</a>
-                    <a href="publications.html" class="nav-link">科研成果</a>
-                    <a href="contact.html" class="nav-link">联系我们</a>
+                    <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="team.html" class="nav-link active" data-i18n="nav-team">团队成员</a>
+                    <a href="publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
                 </div>
                 
                 <!-- 移动端菜单按钮 -->
                 <div class="md:hidden">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
                     <button id="menu-toggle" class="text-gray-600 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -39,11 +50,11 @@
         <!-- 移动端导航菜单 -->
         <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
             <div class="container mx-auto px-4 py-3">
-                <a href="../index.html" class="mobile-nav-link block py-2">首页</a>
-                <a href="research.html" class="mobile-nav-link block py-2">研究方向</a>
-                <a href="team.html" class="mobile-nav-link active block py-2">团队成员</a>
-                <a href="publications.html" class="mobile-nav-link block py-2">科研成果</a>
-                <a href="contact.html" class="mobile-nav-link block py-2">联系我们</a>
+                <a href="../index.html" class="mobile-nav-link block py-2" data-i18n="nav-home">首页</a>
+                <a href="research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
+                <a href="team.html" class="mobile-nav-link active block py-2" data-i18n="nav-team">团队成员</a>
+                <a href="publications.html" class="mobile-nav-link block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
             </div>
         </div>
     </nav>
@@ -55,8 +66,8 @@
     <header class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-blue-600">
         <div class="container mx-auto px-4">
             <div class="text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">团队成员</h1>
-                <p class="text-xl text-blue-100">凝聚优秀人才，共创智能未来</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="team-page-title">团队成员</h1>
+                <p class="text-xl text-blue-100" data-i18n="team-page-subtitle">凝聚优秀人才，共创智能未来</p>
             </div>
         </div>
     </header>
@@ -65,7 +76,7 @@
     <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-title">指导教师</h2>
+                <h2 class="section-title" data-i18n="advisors-title">指导教师</h2>
                 <div class="section-divider"></div>
             </div>
             
@@ -77,12 +88,12 @@
                              alt="张教授" class="w-full h-80 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <h3 class="text-2xl font-bold text-white mb-1">张教授</h3>
-                            <p class="text-blue-200">实验室主任</p>
+                            <h3 class="text-2xl font-bold text-white mb-1" data-i18n="prof-zhang-name">张教授</h3>
+                            <p class="text-blue-200" data-i18n="prof-zhang-title">实验室主任</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4" data-i18n="prof-zhang-desc">
                             人机交互领域专家，主要研究方向包括多模态交互、情感计算和智能界面设计。在国际顶级期刊和会议发表论文50余篇。
                         </p>
                         <div class="flex space-x-4">
@@ -106,12 +117,12 @@
                              alt="李教授" class="w-full h-80 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <h3 class="text-2xl font-bold text-white mb-1">李教授</h3>
-                            <p class="text-blue-200">副主任</p>
+                            <h3 class="text-2xl font-bold text-white mb-1" data-i18n="prof-li-name">李教授</h3>
+                            <p class="text-blue-200" data-i18n="prof-li-title">副主任</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4" data-i18n="prof-li-desc">
                             人工智能与认知科学交叉领域专家，主要研究深度学习、计算机视觉和认知计算。主持多项国家级科研项目。
                         </p>
                         <div class="flex space-x-4">
@@ -135,12 +146,12 @@
                              alt="王教授" class="w-full h-80 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <h3 class="text-2xl font-bold text-white mb-1">王教授</h3>
-                            <p class="text-blue-200">特聘研究员</p>
+                            <h3 class="text-2xl font-bold text-white mb-1" data-i18n="prof-wang-name">王教授</h3>
+                            <p class="text-blue-200" data-i18n="prof-wang-title">特聘研究员</p>
                         </div>
                     </div>
                     <div class="p-4">
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4" data-i18n="prof-wang-desc">
                             虚拟现实与增强现实领域专家，主要研究沉浸式交互技术和人机协同系统。曾获国家自然科学二等奖。
                         </p>
                         <div class="flex space-x-4">
@@ -164,16 +175,16 @@
     <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-title">研究生团队</h2>
+                <h2 class="section-title" data-i18n="graduate-team-title">研究生团队</h2>
                 <div class="section-divider"></div>
             </div>
 
             <!-- 团队分类标签 -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="px-6 py-2 rounded-full bg-blue-500 text-white font-medium">全部</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-600 font-medium hover:bg-blue-50">博士生</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-600 font-medium hover:bg-blue-50">硕士生</button>
-                <button class="px-6 py-2 rounded-full bg-white text-gray-600 font-medium hover:bg-blue-50">访问学者</button>
+                <button class="px-6 py-2 rounded-full bg-blue-500 text-white font-medium" data-i18n="team-filter-all">全部</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-600 font-medium hover:bg-blue-50" data-i18n="team-filter-phd">博士生</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-600 font-medium hover:bg-blue-50" data-i18n="team-filter-master">硕士生</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-600 font-medium hover:bg-blue-50" data-i18n="team-filter-visitor">访问学者</button>
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -181,42 +192,42 @@
                 <div class="student-card">
                     <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
                          alt="张同学" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-semibold mb-1">张同学</h3>
-                    <p class="text-blue-500 text-sm mb-2">博士研究生</p>
-                    <p class="text-gray-600 text-sm">研究方向：多模态情感计算</p>
+                    <h3 class="text-lg font-semibold mb-1" data-i18n="student-zhang-name">张同学</h3>
+                    <p class="text-blue-500 text-sm mb-2" data-i18n="student-zhang-title">博士研究生</p>
+                    <p class="text-gray-600 text-sm" data-i18n="student-zhang-research">研究方向：多模态情感计算</p>
                 </div>
 
                 <!-- 学生2 -->
                 <div class="student-card">
                     <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
                          alt="李同学" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-semibold mb-1">李同学</h3>
-                    <p class="text-blue-500 text-sm mb-2">博士研究生</p>
-                    <p class="text-gray-600 text-sm">研究方向：深度学习与视觉计算</p>
+                    <h3 class="text-lg font-semibold mb-1" data-i18n="student-li-name">李同学</h3>
+                    <p class="text-blue-500 text-sm mb-2" data-i18n="student-li-title">博士研究生</p>
+                    <p class="text-gray-600 text-sm" data-i18n="student-li-research">研究方向：深度学习与视觉计算</p>
                 </div>
 
                 <!-- 学生3 -->
                 <div class="student-card">
                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
                          alt="王同学" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-semibold mb-1">王同学</h3>
-                    <p class="text-blue-500 text-sm mb-2">硕士研究生</p>
-                    <p class="text-gray-600 text-sm">研究方向：人机交互设计</p>
+                    <h3 class="text-lg font-semibold mb-1" data-i18n="student-wang-name">王同学</h3>
+                    <p class="text-blue-500 text-sm mb-2" data-i18n="student-wang-title">硕士研究生</p>
+                    <p class="text-gray-600 text-sm" data-i18n="student-wang-research">研究方向：人机交互设计</p>
                 </div>
 
                 <!-- 学生4 -->
                 <div class="student-card">
                     <img src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80" 
                          alt="赵同学" class="w-full h-64 object-cover rounded-lg mb-4">
-                    <h3 class="text-lg font-semibold mb-1">赵同学</h3>
-                    <p class="text-blue-500 text-sm mb-2">硕士研究生</p>
-                    <p class="text-gray-600 text-sm">研究方向：增强现实技术</p>
+                    <h3 class="text-lg font-semibold mb-1" data-i18n="student-zhao-name">赵同学</h3>
+                    <p class="text-blue-500 text-sm mb-2" data-i18n="student-zhao-title">硕士研究生</p>
+                    <p class="text-gray-600 text-sm" data-i18n="student-zhao-research">研究方向：增强现实技术</p>
                 </div>
             </div>
 
             <!-- 加载更多按钮 -->
             <div class="text-center mt-12">
-                <button class="btn-outline">
+                <button class="btn-outline" data-i18n="load-more">
                     加载更多
                     <i class="fas fa-chevron-down ml-2"></i>
                 </button>
@@ -228,35 +239,35 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="section-title">加入我们</h2>
+                <h2 class="section-title" data-i18n="join-section-title">加入我们</h2>
                 <div class="section-divider mx-auto"></div>
-                <p class="text-lg text-gray-600 mb-8">
+                <p class="text-lg text-gray-600 mb-8" data-i18n="join-section-desc">
                     我们正在寻找对人机交互和人工智能充满热情的优秀人才。如果您有兴趣加入我们的团队，请查看以下招生信息。
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div class="p-6 bg-gray-50 rounded-lg">
                         <i class="fas fa-graduation-cap text-3xl text-blue-500 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">研究生招生</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="graduate-admission-title">研究生招生</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="graduate-admission-desc">
                             每年招收博士生2-3名，硕士生4-5名。欢迎具有计算机、人工智能等相关背景的同学报考。
                         </p>
                         <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">
-                            查看详情 →
+                            <span data-i18n="view-details">查看详情</span> →
                         </a>
                     </div>
                     <div class="p-6 bg-gray-50 rounded-lg">
                         <i class="fas fa-user-graduate text-3xl text-blue-500 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2">博士后招收</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="postdoc-title">博士后招收</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="postdoc-desc">
                             常年招收博士后研究人员，提供具有竞争力的待遇和良好的科研环境。
                         </p>
                         <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">
-                            查看详情 →
+                            <span data-i18n="view-details">查看详情</span> →
                         </a>
                     </div>
                 </div>
                 <a href="contact.html" class="btn-primary">
-                    联系我们
+                    <span data-i18n="contact-us-btn">联系我们</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -268,8 +279,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">HCI-AI 实验室</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">HCI-AI 实验室</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
                         致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
                     </p>
                     <div class="flex space-x-4">
@@ -286,41 +297,41 @@
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-links">快速链接</h3>
                     <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
-                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors">研究方向</a></li>
-                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors">团队成员</a></li>
-                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors">科研成果</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-home">首页</a></li>
+                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-research">研究方向</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-team">团队成员</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-publications">科研成果</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-contact">联系我们</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-contact">联系方式</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                            <span>北京市海淀区学院路XX号</span>
+                            <span data-i18n="address">北京市海淀区学院路XX号</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-3"></i>
-                            <span>contact@hci-ai-lab.edu.cn</span>
+                            <span data-i18n="email">contact@hci-ai-lab.edu.cn</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-phone-alt mt-1 mr-3"></i>
-                            <span>+86 10-12345678</span>
+                            <span data-i18n="phone">+86 10-12345678</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">订阅最新动态</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-newsletter">订阅最新动态</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="footer-newsletter-desc">
                         订阅我们的通讯，获取实验室最新动态和研究成果。
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" data-i18n-placeholder="footer-email-placeholder" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -329,11 +340,13 @@
             </div>
             
             <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-                <p>&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
+                <p data-i18n="footer-copyright">&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html> 

@@ -19,16 +19,27 @@
                 </a>
                 
                 <!-- 桌面导航栏 -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="../index.html" class="nav-link">首页</a>
-                    <a href="research.html" class="nav-link">研究方向</a>
-                    <a href="team.html" class="nav-link">团队成员</a>
-                    <a href="publications.html" class="nav-link">科研成果</a>
-                    <a href="contact.html" class="nav-link active">联系我们</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="contact.html" class="nav-link active" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
                 </div>
                 
                 <!-- 移动端菜单按钮 -->
-                <div class="md:hidden">
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
                     <button id="menu-toggle" class="text-gray-600 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -55,8 +66,8 @@
     <header class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-blue-600">
         <div class="container mx-auto px-4">
             <div class="text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">联系我们</h1>
-                <p class="text-xl text-blue-100">欢迎与我们交流合作</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="contact-page-title">联系我们</h1>
+                <p class="text-xl text-blue-100" data-i18n="contact-page-subtitle">欢迎与我们交流合作</p>
             </div>
         </div>
     </header>
@@ -70,12 +81,12 @@
                     <div class="contact-icon bg-blue-50 text-blue-500">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3 class="contact-title">实验室地址</h3>
-                    <p class="contact-info">
+                    <h3 class="contact-title" data-i18n="lab-address-title">实验室地址</h3>
+                    <p class="contact-info" data-i18n="lab-address-info">
                         北京市海淀区学院路XX号<br>
                         计算机科学与技术学院
                     </p>
-                    <a href="#map" class="contact-link">
+                    <a href="#map" class="contact-link" data-i18n="view-map">
                         查看地图 <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -85,12 +96,12 @@
                     <div class="contact-icon bg-green-50 text-green-500">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <h3 class="contact-title">联系方式</h3>
-                    <p class="contact-info">
+                    <h3 class="contact-title" data-i18n="contact-info-title">联系方式</h3>
+                    <p class="contact-info" data-i18n="contact-info-details">
                         电话：+86 10-12345678<br>
                         邮箱：contact@hci-ai-lab.edu.cn
                     </p>
-                    <a href="mailto:contact@hci-ai-lab.edu.cn" class="contact-link">
+                    <a href="mailto:contact@hci-ai-lab.edu.cn" class="contact-link" data-i18n="send-email">
                         发送邮件 <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -100,7 +111,7 @@
                     <div class="contact-icon bg-purple-50 text-purple-500">
                         <i class="fas fa-share-alt"></i>
                     </div>
-                    <h3 class="contact-title">社交媒体</h3>
+                    <h3 class="contact-title" data-i18n="social-media-title">社交媒体</h3>
                     <div class="flex space-x-4 mb-4">
                         <a href="#" class="social-icon">
                             <i class="fab fa-weixin"></i>
@@ -112,7 +123,7 @@
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
-                    <a href="#" class="contact-link">
+                    <a href="#" class="contact-link" data-i18n="follow-us">
                         关注我们 <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -129,9 +140,9 @@
             <!-- 联系表单 -->
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="section-title">留言咨询</h2>
+                    <h2 class="section-title" data-i18n="contact-form-title">留言咨询</h2>
                     <div class="section-divider"></div>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600" data-i18n="contact-form-desc">
                         如果您有任何问题或合作意向，请填写以下表单，我们会尽快与您联系。
                     </p>
                 </div>
@@ -139,27 +150,27 @@
                 <form class="contact-form">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                         <div>
-                            <label for="name" class="form-label">姓名</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="请输入您的姓名" required>
+                            <label for="name" class="form-label" data-i18n="name-label">姓名</label>
+                            <input type="text" id="name" name="name" class="form-input" data-i18n-placeholder="name-placeholder" placeholder="请输入您的姓名" required>
                         </div>
                         <div>
-                            <label for="email" class="form-label">邮箱</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="请输入您的邮箱" required>
+                            <label for="email" class="form-label" data-i18n="email-label">邮箱</label>
+                            <input type="email" id="email" name="email" class="form-input" data-i18n-placeholder="email-placeholder" placeholder="请输入您的邮箱" required>
                         </div>
                     </div>
 
                     <div class="mb-6">
-                        <label for="subject" class="form-label">主题</label>
-                        <input type="text" id="subject" name="subject" class="form-input" placeholder="请输入咨询主题" required>
+                        <label for="subject" class="form-label" data-i18n="subject-label">主题</label>
+                        <input type="text" id="subject" name="subject" class="form-input" data-i18n-placeholder="subject-placeholder" placeholder="请输入咨询主题" required>
                     </div>
 
                     <div class="mb-6">
-                        <label for="message" class="form-label">留言内容</label>
-                        <textarea id="message" name="message" rows="6" class="form-textarea" placeholder="请输入您的留言内容" required></textarea>
+                        <label for="message" class="form-label" data-i18n="message-label">留言内容</label>
+                        <textarea id="message" name="message" rows="6" class="form-textarea" data-i18n-placeholder="message-placeholder" placeholder="请输入您的留言内容" required></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn-primary">
+                        <button type="submit" class="btn-primary" data-i18n="submit-message">
                             提交留言
                             <i class="fas fa-paper-plane ml-2"></i>
                         </button>
@@ -173,7 +184,7 @@
     <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-title">常见问题</h2>
+                <h2 class="section-title" data-i18n="faq-title">常见问题</h2>
                 <div class="section-divider"></div>
             </div>
 
@@ -182,18 +193,18 @@
                     <!-- FAQ 1 -->
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>如何申请加入实验室？</span>
+                            <span data-i18n="faq-1-question">如何申请加入实验室？</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq-1-answer">
                                 我们欢迎优秀的学生加入实验室。申请流程如下：
                             </p>
                             <ul class="list-disc list-inside mt-2">
-                                <li>准备个人简历和研究计划</li>
-                                <li>发送申请材料至实验室邮箱</li>
-                                <li>等待面试通知</li>
-                                <li>参加面试并等待结果</li>
+                                <li data-i18n="faq-1-item-1">准备个人简历和研究计划</li>
+                                <li data-i18n="faq-1-item-2">发送申请材料至实验室邮箱</li>
+                                <li data-i18n="faq-1-item-3">等待面试通知</li>
+                                <li data-i18n="faq-1-item-4">参加面试并等待结果</li>
                             </ul>
                         </div>
                     </div>
@@ -201,11 +212,11 @@
                     <!-- FAQ 2 -->
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>实验室是否提供实习机会？</span>
+                            <span data-i18n="faq-2-question">实验室是否提供实习机会？</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq-2-answer">
                                 是的，我们定期招收实习生。实习生可以参与实验室的研究项目，
                                 获得实践经验。具体实习机会请关注实验室官网或社交媒体的通知。
                             </p>
@@ -215,17 +226,17 @@
                     <!-- FAQ 3 -->
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>如何与实验室开展合作？</span>
+                            <span data-i18n="faq-3-question">如何与实验室开展合作？</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>
+                            <p data-i18n="faq-3-answer">
                                 我们欢迎与企业、高校和研究机构开展合作。您可以通过以下方式与我们联系：
                             </p>
                             <ul class="list-disc list-inside mt-2">
-                                <li>发送合作意向邮件</li>
-                                <li>填写网站联系表单</li>
-                                <li>直接联系实验室负责人</li>
+                                <li data-i18n="faq-3-item-1">发送合作意向邮件</li>
+                                <li data-i18n="faq-3-item-2">填写网站联系表单</li>
+                                <li data-i18n="faq-3-item-3">直接联系实验室负责人</li>
                             </ul>
                         </div>
                     </div>
@@ -239,8 +250,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">HCI-AI 实验室</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">HCI-AI 实验室</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
                         致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
                     </p>
                     <div class="flex space-x-4">
@@ -257,41 +268,41 @@
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-links">快速链接</h3>
                     <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
-                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors">研究方向</a></li>
-                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors">团队成员</a></li>
-                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors">科研成果</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-home">首页</a></li>
+                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-research">研究方向</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-team">团队成员</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-publications">科研成果</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-contact">联系我们</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-contact">联系方式</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                            <span>北京市海淀区学院路XX号</span>
+                            <span data-i18n="address">北京市海淀区学院路XX号</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-3"></i>
-                            <span>contact@hci-ai-lab.edu.cn</span>
+                            <span data-i18n="email">contact@hci-ai-lab.edu.cn</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-phone-alt mt-1 mr-3"></i>
-                            <span>+86 10-12345678</span>
+                            <span data-i18n="phone">+86 10-12345678</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">订阅最新动态</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-newsletter">订阅最新动态</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="footer-newsletter-desc">
                         订阅我们的通讯，获取实验室最新动态和研究成果。
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" placeholder="您的邮箱地址" data-i18n-placeholder="footer-email-placeholder" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -300,11 +311,13 @@
             </div>
             
             <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-                <p>&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
+                <p data-i18n="footer-copyright">&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html> 

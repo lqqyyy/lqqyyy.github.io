@@ -15,20 +15,31 @@
             <div class="flex justify-between items-center">
                 <a href="#" class="text-xl font-semibold text-gray-800 flex items-center">
                     <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
-                    <span>HCI-AI 实验室</span>
+                    <span>HCI-AI Lab</span>
                 </a>
                 
                 <!-- 桌面导航栏 -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="nav-link active">首页</a>
-                    <a href="pages/research.html" class="nav-link">研究方向</a>
-                    <a href="pages/team.html" class="nav-link">团队成员</a>
-                    <a href="pages/publications.html" class="nav-link">科研成果</a>
-                    <a href="pages/contact.html" class="nav-link">联系我们</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link active" data-i18n="nav-home">首页</a>
+                    <a href="pages/research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
+                    <a href="pages/team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="pages/publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="pages/contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
                 </div>
                 
                 <!-- 移动端菜单按钮 -->
-                <div class="md:hidden">
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
                     <button id="menu-toggle" class="text-gray-600 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -39,11 +50,11 @@
         <!-- 移动端导航菜单 -->
         <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
             <div class="container mx-auto px-4 py-3">
-                <a href="#" class="mobile-nav-link active block py-2">首页</a>
-                <a href="pages/research.html" class="mobile-nav-link block py-2">研究方向</a>
-                <a href="pages/team.html" class="mobile-nav-link block py-2">团队成员</a>
-                <a href="pages/publications.html" class="mobile-nav-link block py-2">科研成果</a>
-                <a href="pages/contact.html" class="mobile-nav-link block py-2">联系我们</a>
+                <a href="#" class="mobile-nav-link active block py-2" data-i18n="nav-home">首页</a>
+                <a href="pages/research.html" class="mobile-nav-link block py-2" data-i18n="nav-research">研究方向</a>
+                <a href="pages/team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
+                <a href="pages/publications.html" class="mobile-nav-link block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="pages/contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
             </div>
         </div>
     </nav>
@@ -60,19 +71,19 @@
         </div>
         <div class="container mx-auto px-4 z-10">
             <div class="max-w-3xl text-white">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in">
-                    突破人机交互与<br>人工智能的边界
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in" data-i18n="hero-title">
+                    突破人机交互与人工智能的边界
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-100 animate-fade-in-delay">
+                <p class="text-xl md:text-2xl mb-8 text-gray-100 animate-fade-in-delay" data-i18n="hero-subtitle">
                     我们致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
                 </p>
                 <div class="flex flex-wrap gap-4 animate-fade-in-delay-2">
                     <a href="pages/research.html" class="btn-primary">
-                        了解研究方向
+                        <span data-i18n="btn-learn-more">了解研究方向</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                     <a href="pages/contact.html" class="btn-secondary">
-                        联系我们
+                        <span data-i18n="btn-contact">联系我们</span>
                         <i class="fas fa-envelope ml-2"></i>
                     </a>
                 </div>
@@ -89,7 +100,7 @@
     <section id="overview" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-title">实验室概览</h2>
+                <h2 class="section-title" data-i18n="overview-title">实验室概览</h2>
                 <div class="section-divider"></div>
             </div>
             
@@ -98,8 +109,8 @@
                     <div class="feature-icon bg-blue-50 text-blue-500">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="feature-title">智能交互</h3>
-                    <p class="feature-desc">
+                    <h3 class="feature-title" data-i18n="intelligent-interaction-title">智能交互</h3>
+                    <p class="feature-desc" data-i18n="intelligent-interaction-desc">
                         研究自然、直观的人机交互方式，结合人工智能技术提升用户体验。
                     </p>
                 </div>
@@ -108,8 +119,8 @@
                     <div class="feature-icon bg-green-50 text-green-500">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3 class="feature-title">认知计算</h3>
-                    <p class="feature-desc">
+                    <h3 class="feature-title" data-i18n="cognitive-computing-title">认知计算</h3>
+                    <p class="feature-desc" data-i18n="cognitive-computing-desc">
                         探索机器学习和认知科学的交叉领域，构建更智能的计算模型。
                     </p>
                 </div>
@@ -118,8 +129,8 @@
                     <div class="feature-icon bg-purple-50 text-purple-500">
                         <i class="fas fa-vr-cardboard"></i>
                     </div>
-                    <h3 class="feature-title">增强现实</h3>
-                    <p class="feature-desc">
+                    <h3 class="feature-title" data-i18n="ar-title">增强现实</h3>
+                    <p class="feature-desc" data-i18n="ar-desc">
                         开发AR/VR技术，创造沉浸式交互体验，拓展人机交互的边界。
                     </p>
                 </div>
@@ -127,7 +138,7 @@
             
             <div class="text-center mt-12">
                 <a href="pages/research.html" class="btn-outline">
-                    查看更多研究方向
+                    <span data-i18n="view-more">查看更多研究方向</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -138,7 +149,7 @@
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-title">研究亮点</h2>
+                <h2 class="section-title" data-i18n="highlights-title">研究亮点</h2>
                 <div class="section-divider"></div>
             </div>
             
@@ -149,12 +160,12 @@
                              alt="智能交互系统" class="rounded-lg shadow-lg">
                     </div>
                     <div class="highlight-content">
-                        <h3 class="text-xl font-semibold mb-3">智能交互系统</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="highlight-1-title">智能交互系统</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="highlight-1-desc">
                             我们开发了一套基于多模态输入的智能交互系统，能够理解用户的语音、手势和面部表情，提供自然流畅的交互体验。
                         </p>
                         <a href="pages/research.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
-                            了解更多
+                            <span data-i18n="learn-more">了解更多</span>
                             <i class="fas fa-long-arrow-alt-right ml-2"></i>
                         </a>
                     </div>
@@ -166,12 +177,12 @@
                              alt="认知辅助技术" class="rounded-lg shadow-lg">
                     </div>
                     <div class="highlight-content">
-                        <h3 class="text-xl font-semibold mb-3">认知辅助技术</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="highlight-2-title">认知辅助技术</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="highlight-2-desc">
                             我们正在研发针对特殊人群的认知辅助技术，通过AI算法分析用户行为模式，提供个性化的辅助建议。
                         </p>
                         <a href="pages/research.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 font-medium">
-                            了解更多
+                            <span data-i18n="learn-more">了解更多</span>
                             <i class="fas fa-long-arrow-alt-right ml-2"></i>
                         </a>
                     </div>
@@ -184,57 +195,57 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="section-title">最新动态</h2>
+                <h2 class="section-title" data-i18n="news-title">最新动态</h2>
                 <div class="section-divider"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="news-card">
                     <div class="news-date">
-                        <span class="news-month">六月</span>
-                        <span class="news-day">15</span>
+                        <span class="news-month" data-i18n="news-1-month">六月</span>
+                        <span class="news-day" data-i18n="news-1-day">15</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">实验室论文被SIGCHI 2023接收</h3>
-                    <p class="text-gray-600 mb-3">
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="news-1-title">实验室论文被SIGCHI 2023接收</h3>
+                    <p class="text-gray-600 mb-3" data-i18n="news-1-desc">
                         我们的研究成果《基于深度学习的情感识别交互系统》被SIGCHI 2023会议接收。
                     </p>
                     <a href="pages/publications.html" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
-                        查看详情 →
+                        <span data-i18n="view-details">查看详情</span> →
                     </a>
                 </div>
                 
                 <div class="news-card">
                     <div class="news-date">
-                        <span class="news-month">五月</span>
-                        <span class="news-day">28</span>
+                        <span class="news-month" data-i18n="news-2-month">五月</span>
+                        <span class="news-day" data-i18n="news-2-day">28</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">实验室获得国家自然科学基金项目</h3>
-                    <p class="text-gray-600 mb-3">
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="news-2-title">实验室获得国家自然科学基金项目</h3>
+                    <p class="text-gray-600 mb-3" data-i18n="news-2-desc">
                         我们的项目《多模态人机交互中的认知计算研究》获得国家自然科学基金支持。
                     </p>
                     <a href="pages/research.html" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
-                        查看详情 →
+                        <span data-i18n="view-details">查看详情</span> →
                     </a>
                 </div>
                 
                 <div class="news-card">
                     <div class="news-date">
-                        <span class="news-month">四月</span>
-                        <span class="news-day">10</span>
+                        <span class="news-month" data-i18n="news-3-month">四月</span>
+                        <span class="news-day" data-i18n="news-3-day">10</span>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">实验室与科技公司建立产学研合作</h3>
-                    <p class="text-gray-600 mb-3">
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="news-3-title">实验室与科技公司建立产学研合作</h3>
+                    <p class="text-gray-600 mb-3" data-i18n="news-3-desc">
                         我们与领先的AI科技公司建立了产学研合作关系，共同推进人机交互技术的落地应用。
                     </p>
                     <a href="pages/contact.html" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
-                        查看详情 →
+                        <span data-i18n="view-details">查看详情</span> →
                     </a>
                 </div>
             </div>
             
             <div class="text-center mt-12">
                 <a href="#" class="btn-outline">
-                    查看更多动态
+                    <span data-i18n="more-news">查看更多动态</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -248,18 +259,18 @@
         
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="section-title">加入我们</h2>
+                <h2 class="section-title" data-i18n="join-us-title">加入我们</h2>
                 <div class="section-divider mx-auto"></div>
-                <p class="text-lg text-gray-600 mb-8">
+                <p class="text-lg text-gray-600 mb-8" data-i18n="join-us-desc">
                     我们始终欢迎对人机交互和人工智能充满热情的优秀人才加入。无论您是研究生、博士生还是博士后，都可以在这里找到施展才华的舞台。
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="pages/team.html" class="btn-primary">
-                        查看团队
+                        <span data-i18n="view-team">查看团队</span>
                         <i class="fas fa-users ml-2"></i>
                     </a>
                     <a href="pages/contact.html" class="btn-secondary">
-                        联系我们
+                        <span data-i18n="btn-contact">联系我们</span>
                         <i class="fas fa-envelope ml-2"></i>
                     </a>
                 </div>
@@ -272,8 +283,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">HCI-AI 实验室</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-semibold mb-4">HCI-AI Lab</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="footer-desc">
                         致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
                     </p>
                     <div class="flex space-x-4">
@@ -290,41 +301,41 @@
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
-                        <li><a href="pages/research.html" class="text-gray-400 hover:text-white transition-colors">研究方向</a></li>
-                        <li><a href="pages/team.html" class="text-gray-400 hover:text-white transition-colors">团队成员</a></li>
-                        <li><a href="pages/publications.html" class="text-gray-400 hover:text-white transition-colors">科研成果</a></li>
-                        <li><a href="pages/contact.html" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-home">首页</a></li>
+                        <li><a href="pages/research.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-research">研究方向</a></li>
+                        <li><a href="pages/team.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-team">团队成员</a></li>
+                        <li><a href="pages/publications.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-publications">科研成果</a></li>
+                        <li><a href="pages/contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-contact">联系我们</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                            <span>北京市海淀区学院路XX号</span>
+                            <span data-i18n="address">北京市海淀区学院路XX号</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-3"></i>
-                            <span>contact@hci-ai-lab.edu.cn</span>
+                            <span data-i18n="email">contact@hci-ai-lab.edu.cn</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-phone-alt mt-1 mr-3"></i>
-                            <span>+86 10-12345678</span>
+                            <span data-i18n="phone">+86 10-12345678</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">订阅最新动态</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="newsletter">订阅最新动态</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="newsletter-desc">
                         订阅我们的通讯，获取实验室最新动态和研究成果。
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" data-i18n="email-placeholder" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -333,11 +344,13 @@
             </div>
             
             <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-                <p>&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
+                <p data-i18n="copyright">&copy; 2023 HCI-AI Lab. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html> 

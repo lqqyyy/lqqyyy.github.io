@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究方向 - HCI-AI 实验室</title>
+    <title>研究方向 - HCI-AI Lab</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -15,20 +15,31 @@
             <div class="flex justify-between items-center">
                 <a href="../index.html" class="text-xl font-semibold text-gray-800 flex items-center">
                     <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
-                    <span>HCI-AI 实验室</span>
+                    <span>HCI-AI Lab</span>
                 </a>
                 
                 <!-- 桌面导航栏 -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="../index.html" class="nav-link">首页</a>
-                    <a href="research.html" class="nav-link active">研究方向</a>
-                    <a href="team.html" class="nav-link">团队成员</a>
-                    <a href="publications.html" class="nav-link">科研成果</a>
-                    <a href="contact.html" class="nav-link">联系我们</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
+                    <a href="research.html" class="nav-link active" data-i18n="nav-research">研究方向</a>
+                    <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
+                    <a href="publications.html" class="nav-link" data-i18n="nav-publications">科研成果</a>
+                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">联系我们</a>
+                    
+                    <!-- 语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-3 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language mr-1"></i>
+                        <span data-i18n="switch-lang">切换语言</span>
+                    </button>
                 </div>
                 
                 <!-- 移动端菜单按钮 -->
-                <div class="md:hidden">
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- 移动端语言切换按钮 -->
+                    <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    
                     <button id="menu-toggle" class="text-gray-600 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -39,11 +50,11 @@
         <!-- 移动端导航菜单 -->
         <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg">
             <div class="container mx-auto px-4 py-3">
-                <a href="../index.html" class="mobile-nav-link block py-2">首页</a>
-                <a href="research.html" class="mobile-nav-link active block py-2">研究方向</a>
-                <a href="team.html" class="mobile-nav-link block py-2">团队成员</a>
-                <a href="publications.html" class="mobile-nav-link block py-2">科研成果</a>
-                <a href="contact.html" class="mobile-nav-link block py-2">联系我们</a>
+                <a href="../index.html" class="mobile-nav-link block py-2" data-i18n="nav-home">首页</a>
+                <a href="research.html" class="mobile-nav-link active block py-2" data-i18n="nav-research">研究方向</a>
+                <a href="team.html" class="mobile-nav-link block py-2" data-i18n="nav-team">团队成员</a>
+                <a href="publications.html" class="mobile-nav-link block py-2" data-i18n="nav-publications">科研成果</a>
+                <a href="contact.html" class="mobile-nav-link block py-2" data-i18n="nav-contact">联系我们</a>
             </div>
         </div>
     </nav>
@@ -55,8 +66,8 @@
     <header class="pt-24 pb-12 bg-gradient-to-r from-blue-500 to-blue-600">
         <div class="container mx-auto px-4">
             <div class="text-center text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">研究方向</h1>
-                <p class="text-xl text-blue-100">探索人机交互与人工智能的前沿领域</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="research-page-title">研究方向</h1>
+                <p class="text-xl text-blue-100" data-i18n="research-page-subtitle">探索人机交互与人工智能的前沿领域</p>
             </div>
         </div>
     </header>
@@ -65,9 +76,9 @@
     <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-title">研究领域概览</h2>
+                <h2 class="section-title" data-i18n="research-overview-title">研究领域概览</h2>
                 <div class="section-divider"></div>
-                <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg" data-i18n="research-overview-desc">
                     我们的研究涵盖人机交互与人工智能的多个前沿领域，致力于开发更智能、更自然的交互技术，推动人机协同的发展。
                 </p>
             </div>
@@ -79,18 +90,18 @@
                     <div class="research-icon bg-blue-50 text-blue-500">
                         <i class="fas fa-hands"></i>
                     </div>
-                    <h3 class="research-title">多模态交互</h3>
-                    <p class="research-desc">
+                    <h3 class="research-title" data-i18n="multimodal-title">多模态交互</h3>
+                    <p class="research-desc" data-i18n="multimodal-desc">
                         研究语音、手势、表情等多模态输入方式，开发自然、直观的人机交互系统。主要包括：
                     </p>
                     <ul class="research-list">
-                        <li>多模态信号处理与融合</li>
-                        <li>情感计算与交互</li>
-                        <li>自然语言理解与生成</li>
-                        <li>手势识别与追踪</li>
+                        <li data-i18n="multimodal-item-1">多模态信号处理与融合</li>
+                        <li data-i18n="multimodal-item-2">情感计算与交互</li>
+                        <li data-i18n="multimodal-item-3">自然语言理解与生成</li>
+                        <li data-i18n="multimodal-item-4">手势识别与追踪</li>
                     </ul>
                     <a href="#multimodal" class="research-link">
-                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                        <span data-i18n="learn-more">了解更多</span> <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
@@ -99,18 +110,18 @@
                     <div class="research-icon bg-green-50 text-green-500">
                         <i class="fas fa-desktop"></i>
                     </div>
-                    <h3 class="research-title">智能界面</h3>
-                    <p class="research-desc">
+                    <h3 class="research-title" data-i18n="interface-title">智能界面</h3>
+                    <p class="research-desc" data-i18n="interface-desc">
                         设计和开发智能化的用户界面，提供个性化、自适应的交互体验。主要包括：
                     </p>
                     <ul class="research-list">
-                        <li>自适应界面设计</li>
-                        <li>个性化推荐系统</li>
-                        <li>智能交互助手</li>
-                        <li>用户行为分析</li>
+                        <li data-i18n="interface-item-1">自适应界面设计</li>
+                        <li data-i18n="interface-item-2">个性化推荐系统</li>
+                        <li data-i18n="interface-item-3">智能交互助手</li>
+                        <li data-i18n="interface-item-4">用户行为分析</li>
                     </ul>
                     <a href="#interface" class="research-link">
-                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                        <span data-i18n="learn-more">了解更多</span> <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
@@ -119,18 +130,18 @@
                     <div class="research-icon bg-purple-50 text-purple-500">
                         <i class="fas fa-vr-cardboard"></i>
                     </div>
-                    <h3 class="research-title">虚拟与增强现实</h3>
-                    <p class="research-desc">
+                    <h3 class="research-title" data-i18n="vr-ar-title">虚拟与增强现实</h3>
+                    <p class="research-desc" data-i18n="vr-ar-desc">
                         探索VR/AR技术在人机交互中的应用，创造沉浸式体验。主要包括：
                     </p>
                     <ul class="research-list">
-                        <li>3D交互技术</li>
-                        <li>混合现实环境</li>
-                        <li>空间定位与追踪</li>
-                        <li>虚拟场景构建</li>
+                        <li data-i18n="vr-ar-item-1">3D交互技术</li>
+                        <li data-i18n="vr-ar-item-2">混合现实环境</li>
+                        <li data-i18n="vr-ar-item-3">空间定位与追踪</li>
+                        <li data-i18n="vr-ar-item-4">虚拟场景构建</li>
                     </ul>
                     <a href="#vr-ar" class="research-link">
-                        了解更多 <i class="fas fa-arrow-right ml-2"></i>
+                        <span data-i18n="learn-more">了解更多</span> <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             </div>
@@ -143,8 +154,8 @@
             <div class="max-w-5xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="order-2 md:order-1">
-                        <h2 class="text-3xl font-bold mb-6">多模态交互研究</h2>
-                        <p class="text-gray-600 mb-6">
+                        <h2 class="text-3xl font-bold mb-6" data-i18n="multimodal-research-title">多模态交互研究</h2>
+                        <p class="text-gray-600 mb-6" data-i18n="multimodal-research-desc">
                             我们致力于开发能够理解和响应人类自然交互方式的智能系统。通过整合语音、手势、面部表情等多种输入模态，
                             创造更自然、更直观的人机交互体验。
                         </p>
@@ -154,8 +165,8 @@
                                     <i class="fas fa-microphone text-blue-500"></i>
                                 </div>
                                 <div class="ml-4">
-                                    <h3 class="text-lg font-semibold mb-2">语音交互</h3>
-                                    <p class="text-gray-600">开发智能语音识别和理解系统，支持自然语言对话。</p>
+                                    <h3 class="text-lg font-semibold mb-2" data-i18n="voice-interaction-title">语音交互</h3>
+                                    <p class="text-gray-600" data-i18n="voice-interaction-desc">开发智能语音识别和理解系统，支持自然语言对话。</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -163,8 +174,8 @@
                                     <i class="fas fa-hand-paper text-blue-500"></i>
                                 </div>
                                 <div class="ml-4">
-                                    <h3 class="text-lg font-semibold mb-2">手势识别</h3>
-                                    <p class="text-gray-600">研究手势追踪和识别技术，实现直观的空间交互。</p>
+                                    <h3 class="text-lg font-semibold mb-2" data-i18n="gesture-recognition-title">手势识别</h3>
+                                    <p class="text-gray-600" data-i18n="gesture-recognition-desc">研究手势追踪和识别技术，实现直观的空间交互。</p>
                                 </div>
                             </div>
                         </div>
@@ -187,8 +198,8 @@
                              alt="智能界面" class="rounded-lg shadow-lg">
                     </div>
                     <div>
-                        <h2 class="text-3xl font-bold mb-6">智能界面研究</h2>
-                        <p class="text-gray-600 mb-6">
+                        <h2 class="text-3xl font-bold mb-6" data-i18n="interface-research-title">智能界面研究</h2>
+                        <p class="text-gray-600 mb-6" data-i18n="interface-research-desc">
                             探索新一代智能用户界面，通过机器学习和人工智能技术，为用户提供个性化、自适应的交互体验。
                         </p>
                         <div class="space-y-4">
@@ -197,8 +208,8 @@
                                     <i class="fas fa-brain text-green-500"></i>
                                 </div>
                                 <div class="ml-4">
-                                    <h3 class="text-lg font-semibold mb-2">智能推荐</h3>
-                                    <p class="text-gray-600">基于用户行为和偏好的个性化内容推荐系统。</p>
+                                    <h3 class="text-lg font-semibold mb-2" data-i18n="smart-recommendation-title">智能推荐</h3>
+                                    <p class="text-gray-600" data-i18n="smart-recommendation-desc">基于用户行为和偏好的个性化内容推荐系统。</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -206,8 +217,8 @@
                                     <i class="fas fa-magic text-green-500"></i>
                                 </div>
                                 <div class="ml-4">
-                                    <h3 class="text-lg font-semibold mb-2">自适应界面</h3>
-                                    <p class="text-gray-600">根据用户习惯和场景自动调整的智能界面系统。</p>
+                                    <h3 class="text-lg font-semibold mb-2" data-i18n="adaptive-interface-title">自适应界面</h3>
+                                    <p class="text-gray-600" data-i18n="adaptive-interface-desc">根据用户习惯和场景自动调整的智能界面系统。</p>
                                 </div>
                             </div>
                         </div>
@@ -222,8 +233,8 @@
             <div class="max-w-5xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="order-2 md:order-1">
-                        <h2 class="text-3xl font-bold mb-6">虚拟与增强现实研究</h2>
-                        <p class="text-gray-600 mb-6">
+                        <h2 class="text-3xl font-bold mb-6" data-i18n="vr-ar-research-title">虚拟与增强现实研究</h2>
+                        <p class="text-gray-600 mb-6" data-i18n="vr-ar-research-desc">
                             开发先进的VR/AR技术，创造身临其境的交互体验，探索虚拟和现实世界的无缝融合。
                         </p>
                         <div class="space-y-4">
@@ -232,8 +243,8 @@
                                     <i class="fas fa-cube text-purple-500"></i>
                                 </div>
                                 <div class="ml-4">
-                                    <h3 class="text-lg font-semibold mb-2">3D交互</h3>
-                                    <p class="text-gray-600">研究虚拟环境中的自然交互方式和技术。</p>
+                                    <h3 class="text-lg font-semibold mb-2" data-i18n="3d-interaction-title">3D交互</h3>
+                                    <p class="text-gray-600" data-i18n="3d-interaction-desc">研究虚拟环境中的自然交互方式和技术。</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -241,8 +252,8 @@
                                     <i class="fas fa-glasses text-purple-500"></i>
                                 </div>
                                 <div class="ml-4">
-                                    <h3 class="text-lg font-semibold mb-2">混合现实</h3>
-                                    <p class="text-gray-600">探索虚拟内容与现实环境的自然融合。</p>
+                                    <h3 class="text-lg font-semibold mb-2" data-i18n="mixed-reality-title">混合现实</h3>
+                                    <p class="text-gray-600" data-i18n="mixed-reality-desc">探索虚拟内容与现实环境的自然融合。</p>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +271,7 @@
     <section class="py-20">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-title">代表性研究项目</h2>
+                <h2 class="section-title" data-i18n="representative-projects">代表性研究项目</h2>
                 <div class="section-divider"></div>
             </div>
 
@@ -272,20 +283,20 @@
                              alt="情感计算项目" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <span class="bg-blue-500 text-white text-sm font-medium px-3 py-1 rounded-full">
+                            <span class="bg-blue-500 text-white text-sm font-medium px-3 py-1 rounded-full" data-i18n="nsfc-grant">
                                 国家自然科学基金
                             </span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">多模态情感计算与交互系统</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-bold mb-2" data-i18n="project-1-title">多模态情感计算与交互系统</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="project-1-desc">
                             基于深度学习的多模态情感识别技术，实现智能人机情感交互，提升用户体验。
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">2022-2025</span>
+                            <span class="text-sm text-gray-500" data-i18n="project-1-period">2022-2025</span>
                             <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">
-                                查看详情 →
+                                <span data-i18n="view-details">查看详情</span> →
                             </a>
                         </div>
                     </div>
@@ -298,20 +309,20 @@
                              alt="AR项目" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-6">
-                            <span class="bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full">
+                            <span class="bg-green-500 text-white text-sm font-medium px-3 py-1 rounded-full" data-i18n="industry-project">
                                 企业合作项目
                             </span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">智能AR辅助系统</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-bold mb-2" data-i18n="project-2-title">智能AR辅助系统</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="project-2-desc">
                             开发基于AR技术的智能辅助系统，为工业生产和日常生活提供直观的信息展示和交互方式。
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">2023-2024</span>
+                            <span class="text-sm text-gray-500" data-i18n="project-2-period">2023-2024</span>
                             <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">
-                                查看详情 →
+                                <span data-i18n="view-details">查看详情</span> →
                             </a>
                         </div>
                     </div>
@@ -324,9 +335,9 @@
     <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="section-title">合作伙伴</h2>
+                <h2 class="section-title" data-i18n="partners">合作伙伴</h2>
                 <div class="section-divider"></div>
-                <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg" data-i18n="partners-desc">
                     我们与国内外多家高校、研究机构和企业建立了长期的合作关系，共同推进人机交互技术的发展。
                 </p>
             </div>
@@ -353,8 +364,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">HCI-AI 实验室</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-semibold mb-4">HCI-AI Lab</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="footer-desc">
                         致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
                     </p>
                     <div class="flex space-x-4">
@@ -371,41 +382,41 @@
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
                     <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
-                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors">研究方向</a></li>
-                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors">团队成员</a></li>
-                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors">科研成果</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-home">首页</a></li>
+                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-research">研究方向</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-team">团队成员</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-publications">科研成果</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-contact">联系我们</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                            <span>北京市海淀区学院路XX号</span>
+                            <span data-i18n="address">北京市海淀区学院路XX号</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-3"></i>
-                            <span>contact@hci-ai-lab.edu.cn</span>
+                            <span data-i18n="email">contact@hci-ai-lab.edu.cn</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-phone-alt mt-1 mr-3"></i>
-                            <span>+86 10-12345678</span>
+                            <span data-i18n="phone">+86 10-12345678</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">订阅最新动态</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="newsletter">订阅最新动态</h3>
+                    <p class="text-gray-400 mb-4" data-i18n="newsletter-desc">
                         订阅我们的通讯，获取实验室最新动态和研究成果。
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="email" data-i18n="email-placeholder" placeholder="您的邮箱地址" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -414,11 +425,13 @@
             </div>
             
             <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-                <p>&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
+                <p data-i18n="copyright">&copy; 2023 HCI-AI Lab. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/language.js"></script>
 </body>
 </html> 
