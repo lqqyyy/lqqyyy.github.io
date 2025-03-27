@@ -26,7 +26,7 @@ function initResearchData() {
                         {"text": "多模态信号处理与融合", "text_en": "Multimodal Signal Processing and Fusion"},
                         {"text": "情感计算与交互", "text_en": "Affective Computing and Interaction"},
                         {"text": "自然语言理解与生成", "text_en": "Natural Language Understanding and Generation"},
-                        {"text": "手势识别与追踪", "text_en": "Gesture Recognition and Tracking"}
+                        {"text": "语音合成与增强", "text_en": "Speech Synthesis and Enhancement"}
                     ],
                     "link": "#multimodal"
                 },
