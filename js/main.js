@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 滚动动画
     initScrollAnimations();
+    
+    // 回到顶部按钮
+    initBackToTop();
 });
 
 // 高亮当前页面的导航链接
@@ -118,6 +121,30 @@ function initScrollAnimations() {
         // 回退方案 - 如果浏览器不支持IntersectionObserver
         animatedElements.forEach(element => {
             element.classList.add('animate-fade-in');
+        });
+    }
+}
+
+// 初始化回到顶部按钮
+function initBackToTop() {
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    if (backToTopButton) {
+        // 控制按钮的显示和隐藏
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+            } else {
+                backToTopButton.style.opacity = '0';
+            }
+        });
+        
+        // 点击回到顶部
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 } 

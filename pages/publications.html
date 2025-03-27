@@ -15,11 +15,11 @@
             <div class="flex justify-between items-center">
                 <a href="../index.html" class="text-xl font-semibold text-gray-800 flex items-center">
                     <span class="inline-block mr-2"><i class="fas fa-microscope text-blue-500"></i></span>
-                    <span>HCI-AI 实验室</span>
+                    <span data-i18n="lab-name">认知智能与创意计算重点实验室</span>
                 </a>
                 
                 <!-- 桌面导航栏 -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html" class="nav-link" data-i18n="nav-home">首页</a>
                     <a href="research.html" class="nav-link" data-i18n="nav-research">研究方向</a>
                     <a href="team.html" class="nav-link" data-i18n="nav-team">团队成员</a>
@@ -31,6 +31,11 @@
                         <i class="fas fa-language mr-1"></i>
                         <span data-i18n="switch-lang">切换语言</span>
                     </button>
+                    
+                    <!-- GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-3 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
                 </div>
                 
                 <!-- 移动端菜单按钮 -->
@@ -39,6 +44,11 @@
                     <button onclick="toggleLanguage()" class="px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors">
                         <i class="fas fa-language"></i>
                     </button>
+                    
+                    <!-- 移动端GitHub按钮 -->
+                    <a href="https://github.com" target="_blank" class="px-2 py-1 rounded-md bg-gray-600 text-white hover:bg-gray-700 transition-colors ml-1">
+                        <i class="fab fa-github"></i>
+                    </a>
                     
                     <button id="menu-toggle" class="text-gray-600 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
@@ -104,117 +114,38 @@
                 <div class="section-divider"></div>
             </div>
 
-            <!-- 年份筛选 -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="publication-filter-btn active" data-i18n="filter-all">全部</button>
-                <button class="publication-filter-btn">2023</button>
-                <button class="publication-filter-btn">2022</button>
-                <button class="publication-filter-btn">2021</button>
-                <button class="publication-filter-btn">2020</button>
+            <!-- 筛选选项 -->
+            <div class="mb-12">
+                <!-- 年份筛选 -->
+                <div class="flex flex-wrap justify-center gap-4 mb-6">
+                    <span class="text-gray-700 font-medium my-auto mr-2" data-i18n="filter-by-year">按年份筛选：</span>
+                    <button class="year-filter-btn active" data-year="all" data-i18n="filter-all">全部</button>
+                    <button class="year-filter-btn" data-year="2025">2025</button>
+                    <button class="year-filter-btn" data-year="2024">2024</button>
+                    <button class="year-filter-btn" data-year="2023">2023</button>
+                    <button class="year-filter-btn" data-year="earlier" data-i18n="filter-earlier">更早</button>
+                </div>
+                
+                <!-- 论文类型筛选 -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="text-gray-700 font-medium my-auto mr-2" data-i18n="filter-by-type">按类型筛选：</span>
+                    <button class="type-filter-btn active" data-type="all" data-i18n="filter-all">全部</button>
+                    <button class="type-filter-btn" data-type="nlp" data-i18n="filter-type-nlp">NLP</button>
+                    <button class="type-filter-btn" data-type="大模型" data-i18n="filter-type-llm">大模型</button>
+                    <button class="type-filter-btn" data-type="软件工程" data-i18n="filter-type-se">软件工程</button>
+                    <button class="type-filter-btn" data-type="hcai" data-i18n="filter-type-hcai">HCAI</button>
+                    <button class="type-filter-btn" data-type="3d重建" data-i18n="filter-type-3d">3D重建</button>
+                </div>
             </div>
 
-            <!-- 论文列表 -->
-            <div class="space-y-8">
-                <!-- 2023年论文 -->
-                <div class="publication-card">
-                    <div class="publication-year">2023</div>
-                    <div class="publication-content">
-                        <h3 class="publication-title" data-i18n="paper-1-title">
-                            基于深度学习的多模态情感识别研究
-                        </h3>
-                        <p class="publication-authors" data-i18n="paper-1-authors">
-                            张三, 李四, 王五
-                        </p>
-                        <p class="publication-journal" data-i18n="paper-1-journal">
-                            IEEE Transactions on Human-Machine Systems
-                        </p>
-                        <div class="publication-tags">
-                            <span class="publication-tag" data-i18n="paper-1-tag-1">SCI</span>
-                            <span class="publication-tag" data-i18n="paper-1-tag-2">IF: 5.6</span>
-                        </div>
-                        <div class="publication-links">
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-file-pdf"></i>
-                                <span data-i18n="paper-pdf">PDF</span>
-                            </a>
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-link"></i>
-                                <span data-i18n="paper-doi">DOI</span>
-                            </a>
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-code"></i>
-                                <span data-i18n="paper-code">代码</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication-card">
-                    <div class="publication-year">2023</div>
-                    <div class="publication-content">
-                        <h3 class="publication-title" data-i18n="paper-2-title">
-                            智能人机交互中的注意力机制研究
-                        </h3>
-                        <p class="publication-authors" data-i18n="paper-2-authors">
-                            李四, 王五, 赵六
-                        </p>
-                        <p class="publication-journal" data-i18n="paper-2-journal">
-                            ACM Conference on Human Factors in Computing Systems (CHI 2023)
-                        </p>
-                        <div class="publication-tags">
-                            <span class="publication-tag" data-i18n="paper-2-tag-1">CCF-A</span>
-                            <span class="publication-tag" data-i18n="paper-2-tag-2">最佳论文</span>
-                        </div>
-                        <div class="publication-links">
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-file-pdf"></i>
-                                <span data-i18n="paper-pdf">PDF</span>
-                            </a>
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-link"></i>
-                                <span data-i18n="paper-doi">DOI</span>
-                            </a>
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-code"></i>
-                                <span data-i18n="paper-code">代码</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2022年论文 -->
-                <div class="publication-card">
-                    <div class="publication-year">2022</div>
-                    <div class="publication-content">
-                        <h3 class="publication-title" data-i18n="paper-3-title">
-                            AR环境下的自然手势交互技术研究
-                        </h3>
-                        <p class="publication-authors" data-i18n="paper-3-authors">
-                            王五, 张三, 李四
-                        </p>
-                        <p class="publication-journal" data-i18n="paper-3-journal">
-                            IEEE Virtual Reality Conference (VR 2022)
-                        </p>
-                        <div class="publication-tags">
-                            <span class="publication-tag" data-i18n="paper-3-tag-1">CCF-A</span>
-                        </div>
-                        <div class="publication-links">
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-file-pdf"></i>
-                                <span data-i18n="paper-pdf">PDF</span>
-                            </a>
-                            <a href="#" class="publication-link">
-                                <i class="fas fa-link"></i>
-                                <span data-i18n="paper-doi">DOI</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- 论文列表 - 动态加载 -->
+            <div id="papers-list" class="space-y-8">
+                <!-- 内容将由JavaScript动态加载 -->
             </div>
 
             <!-- 加载更多按钮 -->
             <div class="text-center mt-12">
-                <button class="btn-outline" data-i18n="load-more">
+                <button id="load-more-papers" class="btn-outline" data-i18n="load-more">
                     加载更多
                     <i class="fas fa-chevron-down ml-2"></i>
                 </button>
@@ -231,61 +162,33 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- 专利列表 -->
+                <!-- 专利列表 - 动态加载 -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6" data-i18n="patents-title">发明专利</h3>
-                    <div class="space-y-6">
-                        <div class="patent-card">
-                            <div class="patent-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div class="patent-content">
-                                <h4 class="patent-title" data-i18n="patent-1-title">一种基于深度学习的手势识别方法</h4>
-                                <p class="patent-info" data-i18n="patent-1-number">专利号：CN123456789A</p>
-                                <p class="patent-authors" data-i18n="patent-1-inventors">发明人：张三, 李四</p>
-                                <span class="patent-status" data-i18n="patent-status-granted">已授权</span>
-                            </div>
-                        </div>
-
-                        <div class="patent-card">
-                            <div class="patent-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div class="patent-content">
-                                <h4 class="patent-title" data-i18n="patent-2-title">一种智能人机交互系统及其实现方法</h4>
-                                <p class="patent-info" data-i18n="patent-2-number">专利号：CN987654321A</p>
-                                <p class="patent-authors" data-i18n="patent-2-inventors">发明人：王五, 赵六</p>
-                                <span class="patent-status" data-i18n="patent-status-granted">已授权</span>
-                            </div>
-                        </div>
+                    <div id="patents-list" class="space-y-6">
+                        <!-- 内容将由JavaScript动态加载 -->
+                    </div>
+                    <!-- 加载更多按钮 -->
+                    <div class="text-center mt-8">
+                        <button id="load-more-patents" class="btn-outline" data-i18n="load-more">
+                            加载更多
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- 获奖情况 -->
+                <!-- 获奖列表 - 动态加载 -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6" data-i18n="awards-title">获奖情况</h3>
-                    <div class="space-y-6">
-                        <div class="award-card">
-                            <div class="award-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="award-content">
-                                <h4 class="award-title" data-i18n="award-1-title">国家科技进步二等奖</h4>
-                                <p class="award-desc" data-i18n="award-1-desc">智能人机交互关键技术及应用</p>
-                                <p class="award-year" data-i18n="award-1-year">2023年</p>
-                            </div>
-                        </div>
-
-                        <div class="award-card">
-                            <div class="award-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="award-content">
-                                <h4 class="award-title" data-i18n="award-2-title">CCF科学技术创新奖</h4>
-                                <p class="award-desc" data-i18n="award-2-desc">多模态情感计算技术创新</p>
-                                <p class="award-year" data-i18n="award-2-year">2022年</p>
-                            </div>
-                        </div>
+                    <div id="awards-list" class="space-y-6">
+                        <!-- 内容将由JavaScript动态加载 -->
+                    </div>
+                    <!-- 加载更多按钮 -->
+                    <div class="text-center mt-8">
+                        <button id="load-more-awards" class="btn-outline" data-i18n="load-more">
+                            加载更多
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -303,66 +206,17 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 转化项目1 -->
-                <div class="transform-card">
-                    <div class="transform-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="智能交互系统" class="w-full h-48 object-cover rounded-t-lg">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2" data-i18n="transform-1-title">智能交互系统</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="transform-1-desc">
-                            为某大型企业开发的智能人机交互系统，提高了生产效率30%。
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500" data-i18n="transform-1-year">2023年</span>
-                            <a href="#" class="text-blue-500 hover:text-blue-600" data-i18n="transform-1-learn-more">
-                                了解更多 →
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- 技术转化列表 - 动态加载 -->
+            <div id="transfers-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 内容将由JavaScript动态加载 -->
+            </div>
 
-                <!-- 转化项目2 -->
-                <div class="transform-card">
-                    <div class="transform-image">
-                        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="AR导航系统" class="w-full h-48 object-cover rounded-t-lg">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2" data-i18n="transform-2-title">AR导航系统</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="transform-2-desc">
-                            开发的AR导航系统已在多个商场和展馆成功部署。
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500" data-i18n="transform-2-year">2022年</span>
-                            <a href="#" class="text-blue-500 hover:text-blue-600" data-i18n="transform-2-learn-more">
-                                了解更多 →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 转化项目3 -->
-                <div class="transform-card">
-                    <div class="transform-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="情感计算平台" class="w-full h-48 object-cover rounded-t-lg">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2" data-i18n="transform-3-title">情感计算平台</h3>
-                        <p class="text-gray-600 mb-4" data-i18n="transform-3-desc">
-                            研发的情感计算平台已服务超过100家企业客户。
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500" data-i18n="transform-3-year">2022年</span>
-                            <a href="#" class="text-blue-500 hover:text-blue-600" data-i18n="transform-3-learn-more">
-                                了解更多 →
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <!-- 加载更多按钮 -->
+            <div class="text-center mt-12">
+                <button id="load-more-transfers" class="btn-outline" data-i18n="load-more">
+                    加载更多
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -370,70 +224,51 @@
     <!-- 页脚 -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">HCI-AI 实验室</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-semibold mb-4" data-i18n="lab-name">认知智能与创意计算重点实验室</h3>
                     <p class="text-gray-400 mb-4" data-i18n="lab-footer-desc">
                         致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-weixin text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-weibo text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://github.com" class="text-gray-400 hover:text-white transition-colors">
                             <i class="fab fa-github text-xl"></i>
                         </a>
                     </div>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-links">快速链接</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-home">首页</a></li>
-                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-research">研究方向</a></li>
-                        <li><a href="team.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-team">团队成员</a></li>
-                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-publications">科研成果</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors" data-i18n="nav-contact">联系我们</a></li>
-                    </ul>
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="quick-links">快速链接</h3>
+                        <div class="flex flex-wrap -mx-2">
+                            <a href="../index.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-home">首页</a>
+                            <a href="research.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-research">研究方向</a>
+                            <a href="team.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-team">团队成员</a>
+                            <a href="publications.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-publications">科研成果</a>
+                            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors px-2 mb-2 mr-4" data-i18n="nav-contact">联系我们</a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div>
-                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-contact">联系方式</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
-                            <span data-i18n="address">北京市海淀区学院路XX号</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-3"></i>
-                            <span data-i18n="email">contact@hci-ai-lab.edu.cn</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
-                            <span data-i18n="phone">+86 10-12345678</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer-newsletter">订阅最新动态</h3>
-                    <p class="text-gray-400 mb-4" data-i18n="footer-newsletter-desc">
-                        订阅我们的通讯，获取实验室最新动态和研究成果。
-                    </p>
-                    <form class="flex">
-                        <input type="email" placeholder="您的邮箱地址" data-i18n-placeholder="footer-email-placeholder" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-r-lg transition-colors">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
+                <div class="md:col-span-1 md:flex md:justify-center">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4" data-i18n="contact-info">联系方式</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                                <span data-i18n="address">苏州市工业园区独墅湖科教创新区仁爱路111号</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-3"></i>
+                                <span data-i18n="email">yushan.pan@ieee.org</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500">
-                <p data-i18n="footer-copyright">&copy; 2023 HCI-AI 实验室. 保留所有权利.</p>
+                <p data-i18n="footer-copyright">&copy; 2023 认知智能与创意计算重点实验室. 保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -441,5 +276,6 @@
     <script src="../js/main.js"></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/language.js"></script>
+    <script src="../js/publicationsData.js"></script>
 </body>
 </html> 

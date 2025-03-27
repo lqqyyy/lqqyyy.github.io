@@ -10,7 +10,7 @@ const translations = {
         
         // 首页
         'hero-title': '突破人机交互与人工智能的边界',
-        'hero-subtitle': '我们致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。',
+        'hero-subtitle': '我们致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机交互体验。',
         'btn-learn-more': '了解研究方向',
         'btn-contact': '联系我们',
         
@@ -51,15 +51,15 @@ const translations = {
 
         // 加入我们
         'join-us-title': '加入我们',
-        'join-us-desc': '我们始终欢迎对人机交互和人工智能充满热情的优秀人才加入。无论您是研究生、博士生还是博士后，都可以在这里找到施展才华的舞台。',
+        'join-us-desc': '我们始终欢迎对认知智能与创意计算充满热情的优秀人才加入。无论您是研究生、博士生还是博士后，都可以在这里找到施展才华的舞台。',
         'view-team': '查看团队',
 
         // 页脚
-        'footer-desc': '致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。',
+        'footer-desc': '致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机交互体验。',
         'quick-links': '快速链接',
         'contact-info': '联系方式',
-        'address': '北京市海淀区学院路XX号',
-        'email': 'contact@hci-ai-lab.edu.cn',
+        'address': '苏州市工业园区独墅湖科教创新区仁爱路111号',
+        'email': 'yushan.pan@ieee.org',
         'phone': '+86 10-12345678',
         'newsletter': '订阅最新动态',
         'newsletter-desc': '订阅我们的通讯，获取实验室最新动态和研究成果。',
@@ -71,9 +71,9 @@ const translations = {
 
         // 研究页面
         'research-page-title': '研究方向',
-        'research-page-subtitle': '探索人机交互与人工智能的前沿领域',
+        'research-page-subtitle': '探索认知智能与创意计算的前沿领域',
         'research-overview-title': '研究领域概览',
-        'research-overview-desc': '我们的研究涵盖人机交互与人工智能的多个前沿领域，致力于开发更智能、更自然的交互技术，推动人机协同的发展。',
+        'research-overview-desc': '我们的研究涵盖认知智能与创意计算的多个前沿领域，致力于开发更智能、更自然的交互技术，推动人机协同的发展。',
         
         // 多模态交互
         'multimodal-title': '多模态交互',
@@ -178,7 +178,7 @@ const translations = {
         
         // 加入我们
         'join-section-title': '加入我们',
-        'join-section-desc': '我们正在寻找对人机交互和人工智能充满热情的优秀人才。如果您有兴趣加入我们的团队，请查看以下招生信息。',
+        'join-section-desc': '我们正在寻找对认知智能与创意计算充满热情的优秀人才。如果您有兴趣加入我们的团队，请查看以下招生信息。',
         'graduate-admission-title': '研究生招生',
         'load-more': '加载更多',
 
@@ -189,18 +189,18 @@ const translations = {
         'contact-us-btn': '联系我们',
         
         // 底部菜单新增
-        'lab-name': 'HCI-AI 实验室',
-        'lab-footer-desc': '致力于探索人机交互与人工智能的前沿技术，创造更智能、更自然的人机交互体验。',
+        'lab-name': '认知智能与创意计算重点实验室',
+        'lab-footer-desc': '致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机交互体验。',
         'footer-links': '快速链接',
         'footer-contact': '联系方式',
         'footer-newsletter': '订阅最新动态',
         'footer-newsletter-desc': '订阅我们的通讯，获取实验室最新动态和研究成果。',
         'footer-email-placeholder': '您的邮箱地址',
-        'footer-copyright': '© 2023 HCI-AI 实验室. 保留所有权利.',
+        'footer-copyright': '© 2023 认知智能与创意计算重点实验室. 保留所有权利.',
 
         // 科研成果页面
         'publications-page-title': '科研成果',
-        'publications-page-subtitle': '展示我们在人机交互与人工智能领域的最新研究成果',
+        'publications-page-subtitle': '展示我们在认知智能与创意计算领域的最新研究成果',
         
         // 成果统计
         'papers-count': '论文发表',
@@ -278,52 +278,17 @@ const translations = {
         'transform-3-year': '2022年',
         'transform-3-learn-more': '了解更多',
 
-        // 联系我们页面
+        // 联系页面
         'contact-page-title': '联系我们',
         'contact-page-subtitle': '欢迎与我们交流合作',
-        
-        // 联系信息卡片
         'lab-address-title': '实验室地址',
-        'lab-address-info': '北京市海淀区学院路XX号<br>计算机科学与技术学院',
+        'lab-address-info': '苏州市工业园区独墅湖科教创新区仁爱路111号',
         'view-map': '查看地图',
-        
         'contact-info-title': '联系方式',
-        'contact-info-details': '电话：+86 10-12345678<br>邮箱：contact@hci-ai-lab.edu.cn',
+        'contact-info-details': '邮箱：yushan.pan@ieee.org',
         'send-email': '发送邮件',
-        
         'social-media-title': '社交媒体',
         'follow-us': '关注我们',
-        
-        // 留言表单
-        'contact-form-title': '留言咨询',
-        'contact-form-desc': '如果您有任何问题或合作意向，请填写以下表单，我们会尽快与您联系。',
-        'name-label': '姓名',
-        'name-placeholder': '请输入您的姓名',
-        'email-label': '邮箱',
-        'email-placeholder': '请输入您的邮箱',
-        'subject-label': '主题',
-        'subject-placeholder': '请输入咨询主题',
-        'message-label': '留言内容',
-        'message-placeholder': '请输入您的留言内容',
-        'submit-message': '提交留言',
-        
-        // 常见问题
-        'faq-title': '常见问题',
-        'faq-1-question': '如何申请加入实验室？',
-        'faq-1-answer': '我们欢迎优秀的学生加入实验室。申请流程如下：',
-        'faq-1-item-1': '准备个人简历和研究计划',
-        'faq-1-item-2': '发送申请材料至实验室邮箱',
-        'faq-1-item-3': '等待面试通知',
-        'faq-1-item-4': '参加面试并等待结果',
-        
-        'faq-2-question': '实验室是否提供实习机会？',
-        'faq-2-answer': '是的，我们定期招收实习生。实习生可以参与实验室的研究项目，获得实践经验。具体实习机会请关注实验室官网或社交媒体的通知。',
-        
-        'faq-3-question': '如何与实验室开展合作？',
-        'faq-3-answer': '我们欢迎与企业、高校和研究机构开展合作。您可以通过以下方式与我们联系：',
-        'faq-3-item-1': '发送合作意向邮件',
-        'faq-3-item-2': '填写网站联系表单',
-        'faq-3-item-3': '直接联系实验室负责人',
     },
     en: {
         // Navigation
@@ -336,7 +301,7 @@ const translations = {
         
         // Home
         'hero-title': 'Breaking Boundaries in HCI and AI',
-        'hero-subtitle': 'We are dedicated to exploring cutting-edge technologies in Human-Computer Interaction and Artificial Intelligence, creating smarter and more natural interaction experiences.',
+        'hero-subtitle': 'We are dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural interaction experiences.',
         'btn-learn-more': 'Learn More',
         'btn-contact': 'Contact Us',
         
@@ -377,15 +342,15 @@ const translations = {
 
         // Join Us
         'join-us-title': 'Join Us',
-        'join-us-desc': 'We always welcome talented individuals who are passionate about human-computer interaction and artificial intelligence. Whether you are a graduate student, doctoral student, or post-doctoral researcher, you can find a stage to showcase your talents here.',
+        'join-us-desc': 'We always welcome talented individuals who are passionate about Cognitive Intelligence and Creative Computing. Whether you are a graduate student, doctoral student, or post-doctoral researcher, you can find a stage to showcase your talents here.',
         'view-team': 'View Team',
 
         // Footer
-        'footer-desc': 'Dedicated to exploring cutting-edge technologies in human-computer interaction and artificial intelligence, creating smarter and more natural interaction experiences.',
+        'footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural interaction experiences.',
         'quick-links': 'Quick Links',
         'contact-info': 'Contact Info',
-        'address': 'XX Xueyuan Road, Haidian District, Beijing',
-        'email': 'contact@hci-ai-lab.edu.cn',
+        'address': '111 Renai Road, Dushu Lake Science and Education Innovation District, Industrial Park, Suzhou',
+        'email': 'yushan.pan@ieee.org',
         'phone': '+86 10-12345678',
         'newsletter': 'Newsletter',
         'newsletter-desc': 'Subscribe to our newsletter to receive the latest updates and research results from our lab.',
@@ -397,9 +362,9 @@ const translations = {
 
         // Research Page
         'research-page-title': 'Research Areas',
-        'research-page-subtitle': 'Exploring the Frontiers of HCI and AI',
+        'research-page-subtitle': 'Exploring the Frontiers of Cognitive Intelligence and Creative Computing',
         'research-overview-title': 'Research Overview',
-        'research-overview-desc': 'Our research covers multiple cutting-edge areas in human-computer interaction and artificial intelligence, dedicated to developing smarter and more natural interaction technologies to advance human-computer collaboration.',
+        'research-overview-desc': 'Our research covers multiple cutting-edge areas in Cognitive Intelligence and Creative Computing, dedicated to developing smarter and more natural interaction technologies to advance human-computer collaboration.',
         
         // Multimodal Interaction
         'multimodal-title': 'Multimodal Interaction',
@@ -504,7 +469,7 @@ const translations = {
         
         // Join Us
         'join-section-title': 'Join Us',
-        'join-section-desc': 'We are looking for talented individuals who are passionate about human-computer interaction and artificial intelligence. If you are interested in joining our team, please check the following admission information.',
+        'join-section-desc': 'We are looking for talented individuals who are passionate about Cognitive Intelligence and Creative Computing. If you are interested in joining our team, please check the following admission information.',
         'graduate-admission-title': 'Graduate Admission',
         'load-more': 'Load More',
 
@@ -516,18 +481,18 @@ const translations = {
         'contact-us-btn': 'Contact Us',
         
         // Footer Menu Additions
-        'lab-name': 'HCI-AI Laboratory',
-        'lab-footer-desc': 'Dedicated to exploring cutting-edge technologies in human-computer interaction and artificial intelligence, creating smarter and more natural interaction experiences.',
+        'lab-name': 'Cognitive Intelligence and Creative Computing Lab',
+        'lab-footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural interaction experiences.',
         'footer-links': 'Quick Links',
         'footer-contact': 'Contact Information',
         'footer-newsletter': 'Newsletter',
         'footer-newsletter-desc': 'Subscribe to our newsletter to receive the latest updates and research results from our lab.',
         'footer-email-placeholder': 'Your email address',
-        'footer-copyright': '© 2023 HCI-AI Lab. All rights reserved.',
+        'footer-copyright': '© 2023 Cognitive Intelligence and Creative Computing Lab. All Rights Reserved.',
 
         // Publications Page
         'publications-page-title': 'Publications',
-        'publications-page-subtitle': 'Showcasing our latest research achievements in HCI and AI',
+        'publications-page-subtitle': 'Showcasing our latest research achievements in Cognitive Intelligence and Creative Computing',
         
         // Statistics
         'papers-count': 'Papers Published',
@@ -605,51 +570,16 @@ const translations = {
         'transform-3-year': '2022',
         'transform-3-learn-more': 'Learn More',
 
-        // Contact Us Page
+        // 联系页面
         'contact-page-title': 'Contact Us',
-        'contact-page-subtitle': 'Welcome to connect and collaborate with us',
-        
-        // Contact Information Cards
-        'lab-address-title': 'Laboratory Address',
-        'lab-address-info': 'XX Academy Road, Haidian District, Beijing<br>School of Computer Science and Technology',
+        'contact-page-subtitle': 'Welcome to get in touch',
+        'lab-address-title': 'Lab Address',
+        'lab-address-info': '111 Renai Road, Dushu Lake Science and Education Innovation District, Industrial Park, Suzhou',
         'view-map': 'View Map',
-        
         'contact-info-title': 'Contact Information',
-        'contact-info-details': 'Phone: +86 10-12345678<br>Email: contact@hci-ai-lab.edu.cn',
+        'contact-info-details': 'Email: yushan.pan@ieee.org',
         'send-email': 'Send Email',
-        
         'social-media-title': 'Social Media',
         'follow-us': 'Follow Us',
-        
-        // Contact Form
-        'contact-form-title': 'Leave a Message',
-        'contact-form-desc': 'If you have any questions or cooperation intentions, please fill out the form below, and we will contact you as soon as possible.',
-        'name-label': 'Name',
-        'name-placeholder': 'Please enter your name',
-        'email-label': 'Email',
-        'email-placeholder': 'Please enter your email',
-        'subject-label': 'Subject',
-        'subject-placeholder': 'Please enter your subject',
-        'message-label': 'Message',
-        'message-placeholder': 'Please enter your message',
-        'submit-message': 'Submit Message',
-        
-        // FAQ
-        'faq-title': 'Frequently Asked Questions',
-        'faq-1-question': 'How to apply to join the laboratory?',
-        'faq-1-answer': 'We welcome excellent students to join our laboratory. The application process is as follows:',
-        'faq-1-item-1': 'Prepare your resume and research plan',
-        'faq-1-item-2': 'Send application materials to the laboratory email',
-        'faq-1-item-3': 'Wait for interview notification',
-        'faq-1-item-4': 'Attend the interview and wait for results',
-        
-        'faq-2-question': 'Does the laboratory provide internship opportunities?',
-        'faq-2-answer': 'Yes, we regularly recruit interns. Interns can participate in the laboratory\'s research projects and gain practical experience. Please pay attention to the announcements on the laboratory\'s official website or social media for specific internship opportunities.',
-        
-        'faq-3-question': 'How to collaborate with the laboratory?',
-        'faq-3-answer': 'We welcome collaboration with enterprises, universities, and research institutions. You can contact us in the following ways:',
-        'faq-3-item-1': 'Send a cooperation intention email',
-        'faq-3-item-2': 'Fill out the contact form on the website',
-        'faq-3-item-3': 'Contact the laboratory director directly',
     }
 }; 
