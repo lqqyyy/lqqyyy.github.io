@@ -1,12 +1,15 @@
 // 全局变量
 let researchData = null;
-let currentLang = 'zh'; // 默认语言
+let currentLang = getCurrentLanguage(); // 使用从localStorage获取的当前语言
 let researchPage = 1;
 const researchItemsPerPage = 3; // 每页显示的研究领域数量
 
 // 初始化函数
 function initResearchData() {
     try {
+        // 初始化当前语言
+        currentLang = getCurrentLanguage();
+        
         // 使用内嵌数据
         researchData = {
             "research_areas": [
@@ -46,10 +49,10 @@ function initResearchData() {
                 },
                 {
                     "id": 3,
-                    "title": "虚拟与增强现实",
-                    "title_en": "Virtual and Augmented Reality",
-                    "desc": "探索VR/AR技术在人机交互中的应用，创造沉浸式体验。主要包括：",
-                    "desc_en": "Exploring VR/AR technology applications in human-computer interaction to create immersive experiences. Main areas include:",
+                    "title": "虚拟现实与仿真",
+                    "title_en": "Virtual Reality and Simulation",
+                    "desc": "探索VR技术和计算机仿真在人机交互中的应用，创造沉浸式体验。主要包括：",
+                    "desc_en": "Exploring VR technologies and computer simulation in human-computer interaction to create immersive experiences. Main areas include:",
                     "icon": "fas fa-vr-cardboard",
                     "icon_bg": "bg-purple-50",
                     "icon_color": "text-purple-500",
@@ -158,6 +161,13 @@ function initResearchData() {
                     "name": "成都信息工程大学",
                     "name_en": "Chengdu University of Information Technology",
                     "logo": "../imgs/成都信息工程大学.png",
+                    "url": "#"
+                },
+                {
+                    "id": 10,
+                    "name": "西安邮电大学",
+                    "name_en": "Xi'an University of Posts and Telecommunications",
+                    "logo": "../imgs/西安邮电大学.png",
                     "url": "#"
                 }
             ]

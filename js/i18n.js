@@ -96,18 +96,34 @@ const translations = {
         'interface-research-desc': '探索新一代智能用户界面，通过机器学习和人工智能技术，为用户提供个性化、自适应的交互体验。',
         
         // 虚拟与增强现实
-        'vr-ar-title': '虚拟与增强现实',
-        'vr-ar-desc': '探索VR/AR技术在人机交互中的应用，创造沉浸式体验。主要包括：',
+        'vr-ar-title': '虚拟现实与仿真',
+        'vr-ar-desc': '探索VR技术和计算机仿真在人机交互中的应用，创造沉浸式体验。主要包括：',
         'vr-ar-item-1': '3D交互技术',
         'vr-ar-item-2': '混合现实环境',
         'vr-ar-item-3': '空间定位与追踪',
         'vr-ar-item-4': '虚拟场景构建',
-        'vr-ar-research-title': '虚拟与增强现实研究',
-        'vr-ar-research-desc': '开发先进的VR/AR技术，创造身临其境的交互体验，探索虚拟和现实世界的无缝融合。',
+        'vr-ar-research-title': '虚拟现实与仿真研究',
+        'vr-ar-research-desc': '开发先进的VR技术和计算机仿真，创造身临其境的交互体验，探索虚拟和现实世界的无缝融合。',
         '3d-interaction-title': '3D交互',
         '3d-interaction-desc': '研究虚拟环境中的自然交互方式和技术。',
         'mixed-reality-title': '混合现实',
         'mixed-reality-desc': '探索虚拟内容与现实环境的自然融合。',
+
+        // 人机协同研究
+        'collaboration-research-title': '人机协同研究',
+        'collaboration-research-desc': '研究人类与AI系统的协同工作方式，提高协作效率和质量。我们致力于开发能够与人类有效协作的智能系统，实现人与AI的优势互补。',
+        'hybrid-intelligence-title': '混合智能系统',
+        'hybrid-intelligence-desc': '开发结合人类智能和机器智能的混合系统，实现更高效的问题解决。',
+        'collaborative-decision-title': '协作决策支持',
+        'collaborative-decision-desc': '研究AI辅助人类决策的方法和技术，提高决策质量和效率。',
+        
+        // 大模型研究
+        'llm-research-title': '大模型研究',
+        'llm-research-desc': '研究大型语言模型在人机交互中的应用，探索更智能的交互方式。通过结合大模型的能力，我们致力于创造更具自然语言理解能力的交互系统。',
+        'llm-dialogue-title': '基于LLM的对话系统',
+        'llm-dialogue-desc': '开发基于大型语言模型的对话系统，实现更自然、更流畅的人机对话。',
+        'collaborative-creation-title': '人机协同内容创作',
+        'collaborative-creation-desc': '探索人类与AI系统协同创作的新模式，提升创作效率和质量。',
 
         // 具体技术
         'voice-interaction-title': '语音交互',
@@ -132,7 +148,9 @@ const translations = {
         
         // 合作伙伴
         'partners': '合作伙伴',
-        'partners-desc': '我们与国内外多家高校、研究机构和企业建立了长期的合作关系，共同推进人机交互技术的发展。',
+        'partners-desc': '我们与国内外多家高校、研究机构和企业建立了长期的合作关系，共同推进认知智能与创意计算技术的发展。',
+        'research-partners-title': '合作伙伴',
+        'research-partners-desc': '我们与国内外多家高校、研究机构和企业建立了长期的合作关系，共同推进认知智能与创意计算技术的发展。',
 
         // 团队页面
         'team-page-title': '团队成员',
@@ -141,17 +159,29 @@ const translations = {
         'graduate-team-title': '研究生团队',
         
         // 导师信息
-        'prof-zhang-name': '张教授',
-        'prof-zhang-title': '实验室主任',
-        'prof-zhang-desc': '人机交互领域专家，主要研究方向包括多模态交互、情感计算和智能界面设计。在国际顶级期刊和会议发表论文50余篇。',
+        'prof-zhang-name': '陈扬斌',
+        'prof-zhang-title': 'Assistant Professor',
+        'prof-zhang-desc': '陈扬斌博士是西交利物浦大学计算机系助理教授，获香港城市大学计算机科学博士学位，中国科学技术大学自动化学士学位。他曾在医疗科技创业公司担任机器学习副总裁，拥有丰富的产业经验。研究领域包括小样本学习、语音语言处理和医疗健康领域的机器智能应用，在顶级国际期刊发表多篇论文，主持多项国家级和省部级科研项目，获得多项专利授权。',
         
-        'prof-li-name': '李教授',
-        'prof-li-title': '副主任',
-        'prof-li-desc': '人工智能与认知科学交叉领域专家，主要研究深度学习、计算机视觉和认知计算。主持多项国家级科研项目。',
+        'prof-li-name': '潘昱杉',
+        'prof-li-title': 'Assistant Professor',
+        'prof-li-desc': '潘昱杉博士（IEEE会员M\'22，高级会员SM\'24）出生并成长于西安，于2022年加入西交利物浦大学，专注于人机计算与软件工程交叉领域研究。曾在挪威生活工作12年，先后任职于奥斯陆大学、挪威科技大学和参数技术公司。研究方向包括人机交互、软件工程和人工智能，已在IEEE、ACM等顶级期刊和会议发表多篇高水平论文，主持多项国际合作项目，是多个国际学术组织活跃成员。',
         
-        'prof-wang-name': '王教授',
-        'prof-wang-title': '特聘研究员',
-        'prof-wang-desc': '虚拟现实与增强现实领域专家，主要研究沉浸式交互技术和人机协同系统。曾获国家自然科学二等奖。',
+        'prof-wang-name': '王懿鸿',
+        'prof-wang-title': 'Assistant Professor',
+        'prof-wang-desc': '王懿鸿博士是西交利物浦大学讲师，研究聚焦人机/人机器人交互(HCI/HRI)领域，专注于众包计算、基于位置的游戏和数字用户行为建模。在多个顶级期刊和会议发表研究成果，包括ACM人机交互会议(CHI)和计算机支持的协作工作与社会计算(CSCW)等。获得多项科研项目资助，与国内外多家高校和企业建立合作关系，在交互设计和用户体验优化方面拥有丰富经验。',
+        
+        'prof-xiang-name': '项南',
+        'prof-xiang-title': 'Assistant Professor',
+        'prof-xiang-desc': '项南博士现为西交利物浦大学计算机系助理教授，2021年获英国伯恩茅斯大学国家计算机动画中心(NCCA)计算机动画博士学位。在学术生涯前，他在动画和视觉特效行业担任技术职务，曾领导3D动画电影制作技术团队，并担任多部好莱坞大片的管道技术总监。研究方向包括计算机图形学、计算机动画和虚拟现实，在数字媒体内容创作和交互式图形系统方面拥有独特专长。',
+        
+        'prof-haiyang-name': '张海洋',
+        'prof-haiyang-title': 'Assistant Professor',
+        'prof-haiyang-desc': '张海洋博士是西交利物浦大学计算机系助理教授，获吉林大学学士学位和爱尔兰利默里克大学博士学位，专攻推荐系统研究并获得全额奖学金。2018-2021年担任谢菲尔德大学研究助理，深化数据驱动研究方法专长。研究方向包括数据挖掘、用户建模和个性化推荐系统，在自适应学习系统和社交媒体分析方面有丰富经验，已在ACM和IEEE顶级期刊会议发表多篇论文，与多家企业开展推荐系统应用合作。',
+        
+        'prof-xu-name': '许志杰',
+        'prof-xu-title': '计算机系主任',
+        'prof-xu-desc': '许志杰教授最近加入西交利物浦大学先进科技学院担任计算机系主任。在加入西浦前，他在英国哈德斯菲尔德大学担任视觉计算领域的全职教授。研究专长包括视觉计算、计算机视觉和人工智能，在多媒体信息处理和智能系统领域取得重要成果。发表百余篇高水平论文，主持多项国际合作科研项目，获得多项技术专利，担任多个国际期刊编委和学术会议主席，在产学研合作方面拥有丰富经验。',
         
         // 团队分类
         'team-filter-all': '全部',
@@ -285,10 +315,26 @@ const translations = {
         'lab-address-info': '苏州市工业园区独墅湖科教创新区仁爱路111号',
         'view-map': '查看地图',
         'contact-info-title': '联系方式',
-        'contact-info-details': '邮箱：yushan.pan@ieee.org',
+        'contact-info-details': '联系人：Prof. Zhijie Xu\n邮箱：yushan.pan@ieee.org',
         'send-email': '发送邮件',
         'social-media-title': '社交媒体',
         'follow-us': '关注我们',
+        
+        // FAQ部分
+        'faq-title': '常见问题',
+        'faq-1-question': '如何申请加入实验室？',
+        'faq-1-answer': '我们欢迎优秀的学生加入我们的实验室。申请流程如下：',
+        'faq-1-item-1': '准备你的简历和研究计划',
+        'faq-1-item-2': '发送申请材料到实验室邮箱',
+        'faq-1-item-3': '等待面试通知',
+        'faq-1-item-4': '参加面试并等待结果',
+        'faq-2-question': '实验室提供实习机会吗？',
+        'faq-2-answer': '是的，我们定期招募实习生。实习生可以参与实验室的研究项目并获得实践经验。请关注我们的官方网站或社交媒体以获取具体的实习机会。',
+        'faq-3-question': '如何与实验室合作？',
+        'faq-3-answer': '我们欢迎与企业、大学和研究机构的合作。您可以通过以下方式与我们联系：',
+        'faq-3-item-1': '发送合作意向邮件',
+        'faq-3-item-2': '在网站上填写联系表单',
+        'faq-3-item-3': '直接联系实验室主任',
     },
     en: {
         // Navigation
@@ -387,18 +433,34 @@ const translations = {
         'interface-research-desc': 'Exploring next-generation intelligent user interfaces, providing personalized and adaptive interaction experiences through machine learning and artificial intelligence technologies.',
         
         // Virtual and Augmented Reality
-        'vr-ar-title': 'Virtual and Augmented Reality',
-        'vr-ar-desc': 'Exploring VR/AR technologies in human-computer interaction, creating immersive experiences. Key areas include:',
+        'vr-ar-title': 'Virtual Reality and Simulation',
+        'vr-ar-desc': 'Exploring VR technologies and computer simulation in human-computer interaction, creating immersive experiences. Key areas include:',
         'vr-ar-item-1': '3D Interaction Technology',
         'vr-ar-item-2': 'Mixed Reality Environment',
         'vr-ar-item-3': 'Spatial Positioning and Tracking',
         'vr-ar-item-4': 'Virtual Scene Construction',
-        'vr-ar-research-title': 'Virtual and Augmented Reality Research',
-        'vr-ar-research-desc': 'Developing advanced VR/AR technologies, creating immersive interaction experiences, and exploring seamless integration of virtual and real worlds.',
+        'vr-ar-research-title': 'Virtual Reality and Simulation Research',
+        'vr-ar-research-desc': 'Developing advanced VR technologies and computer simulation, creating immersive interaction experiences, and exploring seamless integration of virtual and real worlds.',
         '3d-interaction-title': '3D Interaction',
         '3d-interaction-desc': 'Researching natural interaction methods and technologies in virtual environments.',
         'mixed-reality-title': 'Mixed Reality',
         'mixed-reality-desc': 'Exploring natural integration of virtual content with real-world environments.',
+
+        // Human-AI Collaboration Research
+        'collaboration-research-title': 'Human-AI Collaboration Research',
+        'collaboration-research-desc': 'Studying how humans and AI systems can work together to improve collaboration efficiency and quality. We are committed to developing intelligent systems that can effectively collaborate with humans, achieving complementary advantages.',
+        'hybrid-intelligence-title': 'Hybrid Intelligence Systems',
+        'hybrid-intelligence-desc': 'Developing systems that combine human and machine intelligence to achieve more efficient problem-solving.',
+        'collaborative-decision-title': 'Collaborative Decision Support',
+        'collaborative-decision-desc': 'Researching methods and technologies for AI-assisted human decision-making to improve decision quality and efficiency.',
+        
+        // Large Language Model Research
+        'llm-research-title': 'Large Language Model Research',
+        'llm-research-desc': 'Researching applications of large language models in human-computer interaction, exploring more intelligent interaction methods. By leveraging the capabilities of large models, we aim to create interaction systems with enhanced natural language understanding abilities.',
+        'llm-dialogue-title': 'LLM-based Dialogue Systems',
+        'llm-dialogue-desc': 'Developing dialogue systems based on large language models to achieve more natural and fluid human-computer conversations.',
+        'collaborative-creation-title': 'Human-AI Collaborative Content Creation',
+        'collaborative-creation-desc': 'Exploring new modes of collaborative creation between humans and AI systems to enhance creative efficiency and quality.',
 
         // Specific Technologies
         'voice-interaction-title': 'Voice Interaction',
@@ -423,7 +485,9 @@ const translations = {
         
         // Partners
         'partners': 'Partners',
-        'partners-desc': 'We have established long-term partnerships with universities, research institutions, and enterprises both domestically and internationally to jointly advance the development of human-computer interaction technology.',
+        'partners-desc': 'We have established long-term partnerships with universities, research institutions, and enterprises both domestically and internationally to jointly advance the development of Cognitive Intelligence and Creative Computing technology.',
+        'research-partners-title': 'Partners',
+        'research-partners-desc': 'We have established long-term partnerships with universities, research institutions, and enterprises both domestically and internationally to jointly advance the development of Cognitive Intelligence and Creative Computing technology.',
 
         // Team Page
         'team-page-title': 'Our Team',
@@ -432,17 +496,29 @@ const translations = {
         'graduate-team-title': 'Graduate Students',
         
         // Faculty Information
-        'prof-zhang-name': 'Prof. Zhang',
-        'prof-zhang-title': 'Lab Director',
-        'prof-zhang-desc': 'Expert in Human-Computer Interaction, focusing on multimodal interaction, affective computing, and intelligent interface design. Published over 50 papers in top international journals and conferences.',
+        'prof-zhang-name': 'Yangbin Chen',
+        'prof-zhang-title': 'Assistant Professor',
+        'prof-zhang-desc': 'Dr. Yangbin Chen is an Assistant Professor in the Department of Computing at Xi\'an Jiaotong-Liverpool University. He obtained his Ph.D. in Computer Science from City University of Hong Kong and B.Eng. in Automation from University of Science and Technology of China. Prior to academia, he worked as VP of Machine Learning at a medical technology startup. His research focuses on few-shot learning, spoken language processing, and machine intelligence in healthcare applications. He has published multiple papers in top-tier international journals, led several national and provincial research projects, and holds multiple patents.',
         
-        'prof-li-name': 'Prof. Li',
-        'prof-li-title': 'Associate Director',
-        'prof-li-desc': 'Expert in AI and Cognitive Science, specializing in deep learning, computer vision, and cognitive computing. Leading multiple national research projects.',
+        'prof-li-name': 'Yushan Pan',
+        'prof-li-title': 'Assistant Professor',
+        'prof-li-desc': 'Dr. Yushan Pan (IEEE Member M\'22, Senior Member SM\'24), born and raised in Xi\'an, joined XJTLU in 2022, focusing on research at the intersection of human-centric computing and software engineering. He spent 12 years living and working in Norway, with positions at University of Oslo, Norwegian University of Science and Technology, and Parametric Technology Corporation. His research interests include human-computer interaction, software engineering, and artificial intelligence. He has published numerous high-impact papers in IEEE and ACM journals and conferences, led multiple international collaborative projects, and is an active member of several international academic organizations.',
         
-        'prof-wang-name': 'Prof. Wang',
-        'prof-wang-title': 'Distinguished Researcher',
-        'prof-wang-desc': 'Expert in Virtual and Augmented Reality, focusing on immersive interaction technology and human-computer collaboration systems. Recipient of the National Natural Science Award (Second Class).',
+        'prof-wang-name': 'Yihong Wang',
+        'prof-wang-title': 'Assistant Professor',
+        'prof-wang-desc': 'Dr. Wang is a Lecturer at Xi\'an Jiaotong-Liverpool University, focusing on Human-Computer/Robot Interaction (HCI/HRI) with specialization in crowdsourcing, location-based games, and digital user behavior modeling. He has published in top-tier journals and conferences including ACM Conference on Human Factors in Computing Systems (CHI) and Computer-Supported Cooperative Work and Social Computing (CSCW). He has secured multiple research grants and established collaborations with universities and enterprises worldwide, bringing extensive experience in interaction design and user experience optimization.',
+        
+        'prof-xiang-name': 'Nan Xiang',
+        'prof-xiang-title': 'Assistant Professor',
+        'prof-xiang-desc': 'Dr. Nan Xiang is an Assistant Professor in the Department of Computing at Xi\'an Jiaotong-Liverpool University. He obtained his PhD in Computer Animation from the National Centre for Computer Animation (NCCA), Bournemouth University in 2021. Before his academic career, he worked in the animation and VFX industry, where he led a technical team in 3D animation film production and served as a pipeline technical director for several Hollywood feature films. His research interests include computer graphics, computer animation, and virtual reality, with unique expertise in digital media content creation and interactive graphics systems.',
+        
+        'prof-haiyang-name': 'Haiyang Zhang',
+        'prof-haiyang-title': 'Assistant Professor',
+        'prof-haiyang-desc': 'Dr. Haiyang Zhang is an Assistant Professor in the Department of Computing at XJTLU. She holds a Bachelor\'s degree from Jilin University and a Ph.D. from the University of Limerick, where she specialized in Recommender Systems with full scholarship. From 2018 to 2021, she was a Research Associate at the University of Sheffield, deepening her expertise in data-driven methodologies. Her research interests include data mining, user modeling, and personalized recommendation systems, with extensive experience in adaptive learning systems and social media analytics. She has published numerous papers in top ACM and IEEE journals and conferences, and collaborates with various companies on recommender system applications.',
+        
+        'prof-xu-name': 'Zhijie Xu',
+        'prof-xu-title': 'Head of Department of Computing',
+        'prof-xu-desc': 'Professor Zhijie Xu recently joined XJTLU as the Head of the Department of Computing within the School of Advanced Technology. Before joining XJTLU, he was a full professor specializing in visual computing at the University of Huddersfield in the UK. His research expertise includes visual computing, computer vision, and artificial intelligence, with significant contributions to multimedia information processing and intelligent systems. He has published over a hundred high-quality papers, led multiple international research projects, obtained numerous technical patents, served on editorial boards of international journals, chaired academic conferences, and has extensive experience in industry-academia collaboration.',
         
         // Team Categories
         'team-filter-all': 'All',
@@ -577,9 +653,25 @@ const translations = {
         'lab-address-info': '111 Renai Road, Dushu Lake Science and Education Innovation District, Industrial Park, Suzhou',
         'view-map': 'View Map',
         'contact-info-title': 'Contact Information',
-        'contact-info-details': 'Email: yushan.pan@ieee.org',
+        'contact-info-details': 'Contact: Prof. Zhijie Xu\nEmail: yushan.pan@ieee.org',
         'send-email': 'Send Email',
         'social-media-title': 'Social Media',
         'follow-us': 'Follow Us',
+        
+        // FAQ部分
+        'faq-title': 'Frequently Asked Questions',
+        'faq-1-question': 'How to apply to join the lab?',
+        'faq-1-answer': 'We welcome excellent students to join our lab. The application process is as follows:',
+        'faq-1-item-1': 'Prepare your CV and research plan',
+        'faq-1-item-2': 'Send application materials to the lab email',
+        'faq-1-item-3': 'Wait for interview notification',
+        'faq-1-item-4': 'Attend the interview and wait for results',
+        'faq-2-question': 'Does the lab offer internship opportunities?',
+        'faq-2-answer': 'Yes, we regularly recruit interns. Interns can participate in the lab\'s research projects and gain practical experience. Please follow our official website or social media for specific internship opportunities.',
+        'faq-3-question': 'How to collaborate with the lab?',
+        'faq-3-answer': 'We welcome cooperation with enterprises, universities, and research institutions. You can contact us through the following ways:',
+        'faq-3-item-1': 'Send cooperation intention email',
+        'faq-3-item-2': 'Fill out the contact form on the website',
+        'faq-3-item-3': 'Contact the lab director directly',
     }
 }; 

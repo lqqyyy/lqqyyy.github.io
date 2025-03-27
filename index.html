@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>人机交互与人工智能实验室</title>
+    <title>Cognitive Intelligence and Creative Computing Lab</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -209,55 +209,16 @@
                 <div class="section-divider"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="news-card">
-                    <div class="news-date">
-                        <span class="news-month" data-i18n="news-1-month">六月</span>
-                        <span class="news-day" data-i18n="news-1-day">15</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2" data-i18n="news-1-title">实验室论文被SIGCHI 2023接收</h3>
-                    <p class="text-gray-600 mb-3" data-i18n="news-1-desc">
-                        我们的研究成果《基于深度学习的情感识别交互系统》被SIGCHI 2023会议接收。
-                    </p>
-                    <a href="pages/publications.html" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
-                        <span data-i18n="view-details">查看详情</span> →
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <div class="news-date">
-                        <span class="news-month" data-i18n="news-2-month">五月</span>
-                        <span class="news-day" data-i18n="news-2-day">28</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2" data-i18n="news-2-title">实验室获得国家自然科学基金项目</h3>
-                    <p class="text-gray-600 mb-3" data-i18n="news-2-desc">
-                        我们的项目《多模态人机交互中的认知计算研究》获得国家自然科学基金支持。
-                    </p>
-                    <a href="pages/research.html" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
-                        <span data-i18n="view-details">查看详情</span> →
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <div class="news-date">
-                        <span class="news-month" data-i18n="news-3-month">四月</span>
-                        <span class="news-day" data-i18n="news-3-day">10</span>
-                    </div>
-                    <h3 class="text-lg font-semibold mb-2" data-i18n="news-3-title">实验室与科技公司建立产学研合作</h3>
-                    <p class="text-gray-600 mb-3" data-i18n="news-3-desc">
-                        我们与领先的AI科技公司建立了产学研合作关系，共同推进人机交互技术的落地应用。
-                    </p>
-                    <a href="pages/contact.html" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
-                        <span data-i18n="view-details">查看详情</span> →
-                    </a>
-                </div>
+            <!-- 新闻列表 - 动态加载 -->
+            <div id="news-list" class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+                <!-- 内容将由JavaScript动态加载 -->
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="btn-outline">
+                <button id="load-more-news" class="btn-outline">
                     <span data-i18n="more-news">查看更多动态</span>
                     <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -326,6 +287,10 @@
                                 <span data-i18n="address">苏州市工业园区独墅湖科教创新区仁爱路111号</span>
                             </li>
                             <li class="flex items-start">
+                                <i class="fas fa-user mt-1 mr-3"></i>
+                                <span>Prof. Zhijie Xu</span>
+                            </li>
+                            <li class="flex items-start">
                                 <i class="fas fa-envelope mt-1 mr-3"></i>
                                 <span data-i18n="email">yushan.pan@ieee.org</span>
                             </li>
@@ -343,5 +308,6 @@
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/newsData.js"></script>
 </body>
 </html> 

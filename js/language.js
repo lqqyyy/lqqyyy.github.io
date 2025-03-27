@@ -7,6 +7,11 @@ function getCurrentLanguage() {
 function setLanguage(lang) {
     localStorage.setItem('language', lang);
     updateContent();
+    
+    // 添加语言变化事件，供其他模块监听
+    document.dispatchEvent(new CustomEvent('languageChanged', { 
+        detail: { language: lang }
+    }));
 }
 
 // 切换语言
@@ -26,7 +31,13 @@ function updateContent() {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = translations[currentLang][key];
             } else {
-                element.textContent = translations[currentLang][key];
+                // 替换文本中的换行符为HTML的<br>
+                const text = translations[currentLang][key];
+                if (text.includes('\n')) {
+                    element.innerHTML = text.replace(/\n/g, '<br>');
+                } else {
+                    element.textContent = text;
+                }
             }
         }
     });
