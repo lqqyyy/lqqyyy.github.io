@@ -31,23 +31,6 @@ function initResearchData() {
                     "link": "#multimodal"
                 },
                 {
-                    "id": 2,
-                    "title": "智能界面",
-                    "title_en": "Intelligent Interface",
-                    "desc": "设计和开发智能化的用户界面，提供个性化、自适应的交互体验。主要包括：",
-                    "desc_en": "Design and development of intelligent user interfaces to provide personalized and adaptive interaction experiences. Main areas include:",
-                    "icon": "fas fa-desktop",
-                    "icon_bg": "bg-green-50",
-                    "icon_color": "text-green-500",
-                    "items": [
-                        {"text": "自适应界面设计", "text_en": "Adaptive Interface Design"},
-                        {"text": "个性化推荐系统", "text_en": "Personalized Recommendation Systems"},
-                        {"text": "智能交互助手", "text_en": "Intelligent Interaction Assistants"},
-                        {"text": "用户行为分析", "text_en": "User Behavior Analysis"}
-                    ],
-                    "link": "#interface"
-                },
-                {
                     "id": 3,
                     "title": "虚拟现实与仿真",
                     "title_en": "Virtual Reality and Simulation",
@@ -63,6 +46,23 @@ function initResearchData() {
                         {"text": "虚拟场景构建", "text_en": "Virtual Scene Construction"}
                     ],
                     "link": "#vr-ar"
+                },
+                {
+                    "id": 5,
+                    "title": "大模型",
+                    "title_en": "Large Language Models",
+                    "desc": "研究大型语言模型在人机交互中的应用，探索更智能的交互方式。主要包括：",
+                    "desc_en": "Research on large language models in human-computer interaction, exploring more intelligent interaction methods. Main areas include:",
+                    "icon": "fas fa-brain",
+                    "icon_bg": "bg-indigo-50",
+                    "icon_color": "text-indigo-500",
+                    "items": [
+                        {"text": "基于LLM的对话系统", "text_en": "LLM-based Dialogue Systems"},
+                        {"text": "多模态大模型应用", "text_en": "Multimodal Large Model Applications"},
+                        {"text": "人机协同内容创作", "text_en": "Human-AI Collaborative Content Creation"},
+                        {"text": "大模型能力评估", "text_en": "Large Model Capability Assessment"}
+                    ],
+                    "link": "#llm"
                 },
                 {
                     "id": 4,
@@ -82,21 +82,21 @@ function initResearchData() {
                     "link": "#collaboration"
                 },
                 {
-                    "id": 5,
-                    "title": "大模型",
-                    "title_en": "Large Language Models",
-                    "desc": "研究大型语言模型在人机交互中的应用，探索更智能的交互方式。主要包括：",
-                    "desc_en": "Research on large language models in human-computer interaction, exploring more intelligent interaction methods. Main areas include:",
-                    "icon": "fas fa-brain",
-                    "icon_bg": "bg-indigo-50",
-                    "icon_color": "text-indigo-500",
+                    "id": 2,
+                    "title": "智能界面",
+                    "title_en": "Intelligent Interface",
+                    "desc": "设计和开发智能化的用户界面，提供个性化、自适应的交互体验。主要包括：",
+                    "desc_en": "Design and development of intelligent user interfaces to provide personalized and adaptive interaction experiences. Main areas include:",
+                    "icon": "fas fa-desktop",
+                    "icon_bg": "bg-green-50",
+                    "icon_color": "text-green-500",
                     "items": [
-                        {"text": "基于LLM的对话系统", "text_en": "LLM-based Dialogue Systems"},
-                        {"text": "多模态大模型应用", "text_en": "Multimodal Large Model Applications"},
-                        {"text": "人机协同内容创作", "text_en": "Human-AI Collaborative Content Creation"},
-                        {"text": "大模型能力评估", "text_en": "Large Model Capability Assessment"}
+                        {"text": "自适应界面设计", "text_en": "Adaptive Interface Design"},
+                        {"text": "个性化推荐系统", "text_en": "Personalized Recommendation Systems"},
+                        {"text": "智能交互助手", "text_en": "Intelligent Interaction Assistants"},
+                        {"text": "用户行为分析", "text_en": "User Behavior Analysis"}
                     ],
-                    "link": "#llm"
+                    "link": "#interface"
                 }
             ],
             "partners": [
@@ -168,6 +168,13 @@ function initResearchData() {
                     "name": "西安邮电大学",
                     "name_en": "Xi'an University of Posts and Telecommunications",
                     "logo": "../imgs/西安邮电大学.png",
+                    "url": "#"
+                },
+                {
+                    "id": 11,
+                    "name": "马克斯·普朗克研究所",
+                    "name_en": "Max Planck Institute",
+                    "logo": "../imgs/max planck.png",
                     "url": "#"
                 }
             ]

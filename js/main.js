@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 回到顶部按钮
     initBackToTop();
+    
+    // 团队筛选功能
+    initTeamFilter();
 });
 
 // 高亮当前页面的导航链接
@@ -144,6 +147,39 @@ function initBackToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// 初始化团队筛选功能
+function initTeamFilter() {
+    const filterButtons = document.querySelectorAll('.team-filter');
+    const studentCards = document.querySelectorAll('.student-card');
+    
+    if(filterButtons.length > 0 && studentCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 移除所有按钮的活跃状态
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-blue-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-600');
+                });
+                
+                // 添加当前按钮的活跃状态
+                button.classList.remove('bg-white', 'text-gray-600');
+                button.classList.add('bg-blue-500', 'text-white');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // 筛选学生卡片
+                studentCards.forEach(card => {
+                    if(filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
     }

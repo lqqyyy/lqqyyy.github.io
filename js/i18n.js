@@ -9,8 +9,8 @@ const translations = {
         'language': '语言',
         
         // 首页
-        'hero-title': '突破人机交互与人工智能的边界',
-        'hero-subtitle': '我们致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机交互体验。',
+        'hero-title': '突破人工智能与人机共融的瓶颈',
+        'hero-subtitle': '我们致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机共融体验。',
         'btn-learn-more': '了解研究方向',
         'btn-contact': '联系我们',
         
@@ -187,20 +187,29 @@ const translations = {
         'team-filter-all': '全部',
         'team-filter-phd': '博士生',
         'team-filter-master': '硕士生',
+        'team-filter-ra': '研究助理',
         'team-filter-visitor': '访问学者',
         
         // 学生信息
-        'student-zhang-name': '张同学',
+        'student-zhang-name': '张子岳',
         'student-zhang-title': '博士研究生',
-        'student-zhang-research': '研究方向：多模态情感计算',
+        'student-zhang-research': '研究方向：CSCW',
         
-        'student-li-name': '李同学',
-        'student-li-title': '博士研究生',
-        'student-li-research': '研究方向：深度学习与视觉计算',
+        'student-li-name': '欧阳元兵',
+        'student-li-title': '访问学者',
+        'student-li-research': '研究方向：大模型、可穿戴设备',
         
-        'student-wang-name': '王同学',
-        'student-wang-title': '硕士研究生',
-        'student-wang-research': '研究方向：人机交互设计',
+        'student-wang-name': 'Daniel Yang',
+        'student-wang-title': '访问学者',
+        'student-wang-research': '研究方向：',
+        
+        'student-he-name': '贺晓江',
+        'student-he-title': '研究助理',
+        'student-he-research': '研究方向：情感计算、多模态',
+        
+        'student-li-q-name': '黎秋宇',
+        'student-li-q-title': '博士研究生',
+        'student-li-q-research': '研究方向：多模态、大模型',
         
         'student-zhao-name': '赵同学',
         'student-zhao-title': '硕士研究生',
@@ -220,7 +229,7 @@ const translations = {
         
         // 底部菜单新增
         'lab-name': '认知智能与创意计算重点实验室',
-        'lab-footer-desc': '致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机交互体验。',
+        'lab-footer-desc': '致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机共融体验。',
         'footer-links': '快速链接',
         'footer-contact': '联系方式',
         'footer-newsletter': '订阅最新动态',
@@ -346,8 +355,8 @@ const translations = {
         'language': 'Language',
         
         // Home
-        'hero-title': 'Breaking Boundaries in HCI and AI',
-        'hero-subtitle': 'We are dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural interaction experiences.',
+        'hero-title': 'Breaking Bottlenecks in AI and Human-Machine Harmony',
+        'hero-subtitle': 'We are dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural human-machine harmony experiences.',
         'btn-learn-more': 'Learn More',
         'btn-contact': 'Contact Us',
         
@@ -392,7 +401,7 @@ const translations = {
         'view-team': 'View Team',
 
         // Footer
-        'footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural interaction experiences.',
+        'footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural human-machine harmony experiences.',
         'quick-links': 'Quick Links',
         'contact-info': 'Contact Info',
         'address': '111 Renai Road, Dushu Lake Science and Education Innovation District, Industrial Park, Suzhou',
@@ -524,22 +533,31 @@ const translations = {
         'team-filter-all': 'All',
         'team-filter-phd': 'Ph.D. Students',
         'team-filter-master': 'Master Students',
+        'team-filter-ra': 'Research Assistants',
         'team-filter-visitor': 'Visiting Scholars',
         
         // Student Information
-        'student-zhang-name': 'Zhang',
+        'student-zhang-name': 'Zhang Ziyue',
         'student-zhang-title': 'Ph.D. Student',
-        'student-zhang-research': 'Research: Multimodal Affective Computing',
+        'student-zhang-research': 'Research: CSCW',
         
-        'student-li-name': 'Li',
-        'student-li-title': 'Ph.D. Student',
-        'student-li-research': 'Research: Deep Learning and Visual Computing',
+        'student-li-name': 'Ouyang Yuanbing',
+        'student-li-title': 'Visiting Scholar',
+        'student-li-research': 'Research: Large Language Models, Wearable Devices',
         
-        'student-wang-name': 'Wang',
-        'student-wang-title': 'Master Student',
-        'student-wang-research': 'Research: HCI Design',
+        'student-wang-name': 'Daniel Yang',
+        'student-wang-title': 'Visiting Scholar',
+        'student-wang-research': 'Research: ',
         
-        'student-zhao-name': 'Zhao',
+        'student-he-name': 'He Xiaojian',
+        'student-he-title': 'Research Assistant',
+        'student-he-research': 'Research: Affective Computing, Multimodal',
+        
+        'student-li-q-name': 'Li Qiuyu',
+        'student-li-q-title': 'Ph.D. Student',
+        'student-li-q-research': 'Research: Multimodal, Large Language Models',
+        
+        'student-zhao-name': 'Zhao Zihan',
         'student-zhao-title': 'Master Student',
         'student-zhao-research': 'Research: Augmented Reality Technology',
         
@@ -558,7 +576,7 @@ const translations = {
         
         // Footer Menu Additions
         'lab-name': 'Cognitive Intelligence and Creative Computing Lab',
-        'lab-footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural interaction experiences.',
+        'lab-footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural human-machine harmony experiences.',
         'footer-links': 'Quick Links',
         'footer-contact': 'Contact Information',
         'footer-newsletter': 'Newsletter',
