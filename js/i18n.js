@@ -169,7 +169,7 @@ const translations = {
         
         'prof-wang-name': '王懿鸿',
         'prof-wang-title': 'Assistant Professor',
-        'prof-wang-desc': '王懿鸿博士是西交利物浦大学讲师，研究聚焦人机/人机器人交互(HCI/HRI)领域，专注于众包计算、基于位置的游戏和数字用户行为建模。在多个顶级期刊和会议发表研究成果，包括ACM人机交互会议(CHI)和计算机支持的协作工作与社会计算(CSCW)等。获得多项科研项目资助，与国内外多家高校和企业建立合作关系，在交互设计和用户体验优化方面拥有丰富经验。',
+        'prof-wang-desc': '王懿鸿博士是西交利物浦大学计算机系助理教授，研究聚焦人机/人机器人交互(HCI/HRI)领域，专注于众包计算、基于位置的游戏和数字用户行为建模。在多个顶级期刊和会议发表研究成果，包括ACM人机交互会议(CHI)和计算机支持的协作工作与社会计算(CSCW)等。获得多项科研项目资助，与国内外多家高校和企业建立合作关系，在交互设计和用户体验优化方面拥有丰富经验。',
         
         'prof-xiang-name': '项南',
         'prof-xiang-title': 'Assistant Professor',
@@ -218,11 +218,15 @@ const translations = {
         // 新增学生
         'student-zhang-j-name': '张吉儿',
         'student-zhang-j-title': '博士研究生',
-        'student-zhang-j-research': '研究方向：虚拟现实与仿真',
+        'student-zhang-j-research': '研究方向：三维重建',
         
         'student-gao-name': '高一凡',
         'student-gao-title': '博士研究生',
         'student-gao-research': '研究方向：多模态、情感计算、大模型',
+        
+        'student-xu-h-name': '徐豪谡',
+        'student-xu-h-title': '研究生',
+        'student-xu-h-research': '研究方向：HCI、CSCW',
         
         // 加入我们
         'join-section-title': '加入我们',
@@ -237,14 +241,14 @@ const translations = {
         'contact-us-btn': '联系我们',
         
         // 底部菜单新增
-        'lab-name': '认知智能与创意计算重点实验室',
+        'lab-name': '认知智能与创意计算研究中心',
         'lab-footer-desc': '致力于探索认知智能与创意计算的前沿技术，创造更智能、更自然的人机共融体验。',
         'footer-links': '快速链接',
         'footer-contact': '联系方式',
         'footer-newsletter': '订阅最新动态',
         'footer-newsletter-desc': '订阅我们的通讯，获取实验室最新动态和研究成果。',
         'footer-email-placeholder': '您的邮箱地址',
-        'footer-copyright': '© 2023 认知智能与创意计算重点实验室. 保留所有权利.',
+        'footer-copyright': '© 2023 认知智能与创意计算研究中心. 保留所有权利.',
 
         // 科研成果页面
         'publications-page-title': '科研成果',
@@ -524,7 +528,7 @@ const translations = {
         
         'prof-wang-name': 'Yihong Wang',
         'prof-wang-title': 'Assistant Professor',
-        'prof-wang-desc': 'Dr. Wang is a Lecturer at Xi\'an Jiaotong-Liverpool University, focusing on Human-Computer/Robot Interaction (HCI/HRI) with specialization in crowdsourcing, location-based games, and digital user behavior modeling. He has published in top-tier journals and conferences including ACM Conference on Human Factors in Computing Systems (CHI) and Computer-Supported Cooperative Work and Social Computing (CSCW). He has secured multiple research grants and established collaborations with universities and enterprises worldwide, bringing extensive experience in interaction design and user experience optimization.',
+        'prof-wang-desc': 'Dr. Wang is an Assistant Professor in the Department of Computing at Xi\'an Jiaotong-Liverpool University, focusing on Human-Computer/Robot Interaction (HCI/HRI) with specialization in crowdsourcing, location-based games, and digital user behavior modeling. He has published in top-tier journals and conferences including ACM Conference on Human Factors in Computing Systems (CHI) and Computer-Supported Cooperative Work and Social Computing (CSCW). He has secured multiple research grants and established collaborations with universities and enterprises worldwide, bringing extensive experience in interaction design and user experience optimization.',
         
         'prof-xiang-name': 'Nan Xiang',
         'prof-xiang-title': 'Assistant Professor',
@@ -573,11 +577,15 @@ const translations = {
         // New Students
         'student-zhang-j-name': 'Jier Zhang',
         'student-zhang-j-title': 'Ph.D. Student',
-        'student-zhang-j-research': 'Research: Virtual Reality and Simulation',
+        'student-zhang-j-research': 'Research: 3D Reconstruction',
         
         'student-gao-name': 'Yifan Gao',
         'student-gao-title': 'Ph.D. Student',
         'student-gao-research': 'Research: Multimodal, Affective Computing, Large Language Models',
+        
+        'student-xu-h-name': 'Haosu Xu',
+        'student-xu-h-title': 'Master Student',
+        'student-xu-h-research': 'Research: HCI, CSCW',
         
         // Join Us
         'join-section-title': 'Join Us',
@@ -593,14 +601,14 @@ const translations = {
         'contact-us-btn': 'Contact Us',
         
         // Footer Menu Additions
-        'lab-name': 'Cognitive Intelligence and Creative Computing Lab',
+        'lab-name': 'Center for Cognitive Intelligence and Creative Computing',
         'lab-footer-desc': 'Dedicated to exploring cutting-edge technologies in Cognitive Intelligence and Creative Computing, creating smarter and more natural human-machine harmony experiences.',
         'footer-links': 'Quick Links',
         'footer-contact': 'Contact Information',
         'footer-newsletter': 'Newsletter',
         'footer-newsletter-desc': 'Subscribe to our newsletter to receive the latest updates and research results from our lab.',
         'footer-email-placeholder': 'Your email address',
-        'footer-copyright': '© 2023 Cognitive Intelligence and Creative Computing Lab. All Rights Reserved.',
+        'footer-copyright': '© 2023 Center for Cognitive Intelligence and Creative Computing. All Rights Reserved.',
 
         // Publications Page
         'publications-page-title': 'Publications',
