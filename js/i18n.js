@@ -215,6 +215,15 @@ const translations = {
         'student-zhao-title': '硕士研究生',
         'student-zhao-research': '研究方向：增强现实技术',
         
+        // 新增学生
+        'student-zhang-j-name': '张吉儿',
+        'student-zhang-j-title': '博士研究生',
+        'student-zhang-j-research': '研究方向：虚拟现实与仿真',
+        
+        'student-gao-name': '高一凡',
+        'student-gao-title': '博士研究生',
+        'student-gao-research': '研究方向：多模态、情感计算、大模型',
+        
         // 加入我们
         'join-section-title': '加入我们',
         'join-section-desc': '我们正在寻找对认知智能与创意计算充满热情的优秀人才。如果您有兴趣加入我们的团队，请查看以下招生信息。',
@@ -537,11 +546,11 @@ const translations = {
         'team-filter-visitor': 'Visiting Scholars',
         
         // Student Information
-        'student-zhang-name': 'Zhang Ziyue',
+        'student-zhang-name': 'Ziyue Zhang',
         'student-zhang-title': 'Ph.D. Student',
         'student-zhang-research': 'Research: CSCW',
         
-        'student-li-name': 'Ouyang Yuanbing',
+        'student-li-name': 'Yuanbing Ouyang',
         'student-li-title': 'Visiting Scholar',
         'student-li-research': 'Research: Large Language Models, Wearable Devices',
         
@@ -549,17 +558,26 @@ const translations = {
         'student-wang-title': 'Visiting Scholar',
         'student-wang-research': 'Research: ',
         
-        'student-he-name': 'He Xiaojian',
+        'student-he-name': 'Xiaojiang He',
         'student-he-title': 'Research Assistant',
         'student-he-research': 'Research: Affective Computing, Multimodal',
         
-        'student-li-q-name': 'Li Qiuyu',
-        'student-li-q-title': 'Ph.D. Student',
+        'student-li-q-name': 'Qiuyu Li',
+        'student-li-title': 'Ph.D. Student',
         'student-li-q-research': 'Research: Multimodal, Large Language Models',
         
-        'student-zhao-name': 'Zhao Zihan',
+        'student-zhao-name': 'Zihan Zhao',
         'student-zhao-title': 'Master Student',
         'student-zhao-research': 'Research: Augmented Reality Technology',
+        
+        // New Students
+        'student-zhang-j-name': 'Jier Zhang',
+        'student-zhang-j-title': 'Ph.D. Student',
+        'student-zhang-j-research': 'Research: Virtual Reality and Simulation',
+        
+        'student-gao-name': 'Yifan Gao',
+        'student-gao-title': 'Ph.D. Student',
+        'student-gao-research': 'Research: Multimodal, Affective Computing, Large Language Models',
         
         // Join Us
         'join-section-title': 'Join Us',
