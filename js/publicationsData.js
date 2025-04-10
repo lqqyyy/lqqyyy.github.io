@@ -12,273 +12,53 @@ let currentYear = 'all'; // 当前选中的年份
 // 初始化函数
 function initPublicationsData() {
     try {
-        // 直接使用内嵌数据而不是从文件加载
-        publicationsData = {
-          "papers": [
-            {
-              "id": 1,
-              "title": "基于深度学习的多模态情感识别研究",
-              "title_en": "Deep Learning-Based Multimodal Emotion Recognition Research",
-              "authors": "张三, 李四, 王五",
-              "authors_en": "Zhang San, Li Si, Wang Wu",
-              "journal": "IEEE Transactions on Human-Machine Systems",
-              "year": 2023,
-              "type": "hcai",
-              "tags": [
-                {"text": "SCI", "text_en": "SCI"},
-                {"text": "IF: 5.6", "text_en": "IF: 5.6"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"},
-                {"type": "code", "url": "#"}
-              ]
-            },
-            {
-              "id": 2,
-              "title": "智能人机交互中的注意力机制研究",
-              "title_en": "Research on Attention Mechanism in Intelligent Human-Computer Interaction",
-              "authors": "李四, 王五, 赵六",
-              "authors_en": "Li Si, Wang Wu, Zhao Liu",
-              "journal": "ACM Conference on Human Factors in Computing Systems (CHI 2023)",
-              "year": 2024,
-              "type": "hcai",
-              "tags": [
-                {"text": "CCF-A", "text_en": "CCF-A"},
-                {"text": "最佳论文", "text_en": "Best Paper"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"},
-                {"type": "code", "url": "#"}
-              ]
-            },
-            {
-              "id": 3,
-              "title": "AR环境下的自然手势交互技术研究",
-              "title_en": "Research on Natural Gesture Interaction Technology in AR Environment",
-              "authors": "王五, 张三, 李四",
-              "authors_en": "Wang Wu, Zhang San, Li Si",
-              "journal": "IEEE Virtual Reality Conference (VR 2022)",
-              "year": 2022,
-              "type": "3d重建",
-              "tags": [
-                {"text": "CCF-A", "text_en": "CCF-A"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"}
-              ]
-            },
-            {
-              "id": 4,
-              "title": "基于深度强化学习的智能人机对话系统",
-              "title_en": "Intelligent Human-Machine Dialogue System Based on Deep Reinforcement Learning",
-              "authors": "赵六, 张三, 李四",
-              "authors_en": "Zhao Liu, Zhang San, Li Si",
-              "journal": "ACM Transactions on Interactive Intelligent Systems",
-              "year": 2025,
-              "type": "大模型",
-              "tags": [
-                {"text": "SCI", "text_en": "SCI"},
-                {"text": "IF: 4.8", "text_en": "IF: 4.8"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"},
-                {"type": "code", "url": "#"}
-              ]
-            },
-            {
-              "id": 5,
-              "title": "多模态数据融合的情感计算方法",
-              "title_en": "Affective Computing Method Based on Multimodal Data Fusion",
-              "authors": "张三, 王五, 钱七",
-              "authors_en": "Zhang San, Wang Wu, Qian Qi",
-              "journal": "IEEE Transactions on Affective Computing",
-              "year": 2021,
-              "type": "nlp",
-              "tags": [
-                {"text": "SCI", "text_en": "SCI"},
-                {"text": "IF: 6.2", "text_en": "IF: 6.2"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"}
-              ]
-            },
-            {
-              "id": 6,
-              "title": "大型软件系统架构设计与优化",
-              "title_en": "Large-Scale Software System Architecture Design and Optimization",
-              "authors": "李四, 张三, 赵六",
-              "authors_en": "Li Si, Zhang San, Zhao Liu",
-              "journal": "IEEE Transactions on Software Engineering",
-              "year": 2022,
-              "type": "软件工程",
-              "tags": [
-                {"text": "SCI", "text_en": "SCI"},
-                {"text": "IF: 5.8", "text_en": "IF: 5.8"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"}
-              ]
-            },
-            {
-              "id": 7,
-              "title": "自然语言处理在人机交互中的应用研究",
-              "title_en": "Research on Natural Language Processing Applications in HCI",
-              "authors": "王五, 张三, 钱七",
-              "authors_en": "Wang Wu, Zhang San, Qian Qi",
-              "journal": "ACM Transactions on Computer-Human Interaction",
-              "year": 2023,
-              "type": "nlp",
-              "tags": [
-                {"text": "CCF-A", "text_en": "CCF-A"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"},
-                {"type": "code", "url": "#"}
-              ]
-            },
-            {
-              "id": 8,
-              "title": "室内场景的三维重建与语义分割",
-              "title_en": "3D Reconstruction and Semantic Segmentation of Indoor Scenes",
-              "authors": "赵六, 王五, 李四",
-              "authors_en": "Zhao Liu, Wang Wu, Li Si",
-              "journal": "IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2024)",
-              "year": 2024,
-              "type": "3d重建",
-              "tags": [
-                {"text": "CCF-A", "text_en": "CCF-A"}
-              ],
-              "links": [
-                {"type": "pdf", "url": "#"},
-                {"type": "doi", "url": "#"},
-                {"type": "code", "url": "#"}
-              ]
+        // 从API获取数据
+        fetch('http://114.132.235.134:8088/publications', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
             }
-          ],
-          "patents": [
-            {
-              "id": 1,
-              "title": "一种基于深度学习的手势识别方法",
-              "title_en": "A Deep Learning-Based Gesture Recognition Method",
-              "number": "CN123456789A",
-              "inventors": "张三, 李四",
-              "inventors_en": "Zhang San, Li Si",
-              "status": "已授权",
-              "status_en": "Granted",
-              "year": 2022
-            },
-            {
-              "id": 2,
-              "title": "一种智能人机交互系统及其实现方法",
-              "title_en": "An Intelligent Human-Computer Interaction System and Its Implementation Method",
-              "number": "CN987654321A",
-              "inventors": "王五, 赵六",
-              "inventors_en": "Wang Wu, Zhao Liu",
-              "status": "已授权",
-              "status_en": "Granted",
-              "year": 2022
-            },
-            {
-              "id": 3,
-              "title": "基于多模态信息的情感识别方法",
-              "title_en": "Emotion Recognition Method Based on Multimodal Information",
-              "number": "CN123459876A",
-              "inventors": "李四, 王五, 张三",
-              "inventors_en": "Li Si, Wang Wu, Zhang San",
-              "status": "已授权",
-              "status_en": "Granted",
-              "year": 2021
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('网络请求失败: ' + response.status);
             }
-          ],
-          "awards": [
-            {
-              "id": 1,
-              "title": "国家科技进步二等奖",
-              "title_en": "National Science and Technology Progress Award (Second Class)",
-              "description": "智能人机交互关键技术及应用",
-              "description_en": "Key Technologies and Applications in Intelligent Human-Computer Interaction",
-              "year": "2023年",
-              "year_en": "2023"
-            },
-            {
-              "id": 2,
-              "title": "CCF科学技术创新奖",
-              "title_en": "CCF Science and Technology Innovation Award",
-              "description": "多模态情感计算技术创新",
-              "description_en": "Innovation in Multimodal Affective Computing Technology",
-              "year": "2022年",
-              "year_en": "2022"
-            },
-            {
-              "id": 3,
-              "title": "国际人机交互学会青年科学家奖",
-              "title_en": "Young Scientist Award of International HCI Society",
-              "description": "在人机交互领域的杰出贡献",
-              "description_en": "Outstanding Contribution in Human-Computer Interaction Field",
-              "year": "2021年",
-              "year_en": "2021"
-            }
-          ],
-          "transfers": [
-            {
-              "id": 1,
-              "title": "智能交互系统",
-              "title_en": "Intelligent Interaction System",
-              "description": "为某大型企业开发的智能人机交互系统，提高了生产效率30%。",
-              "description_en": "Developed an intelligent HCI system for a large enterprise, improving production efficiency by 30%.",
-              "year": "2023年",
-              "year_en": "2023",
-              "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            },
-            {
-              "id": 2,
-              "title": "AR导航系统",
-              "title_en": "AR Navigation System",
-              "description": "开发的AR导航系统已在多个商场和展馆成功部署。",
-              "description_en": "The AR navigation system has been successfully deployed in multiple shopping malls and exhibition halls.",
-              "year": "2022年",
-              "year_en": "2022",
-              "image": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            },
-            {
-              "id": 3,
-              "title": "情感计算平台",
-              "title_en": "Affective Computing Platform",
-              "description": "研发的情感计算平台已服务超过100家企业客户。",
-              "description_en": "The developed affective computing platform has served over 100 enterprise clients.",
-              "year": "2022年",
-              "year_en": "2022",
-              "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            }
-          ]
-        };
+            return response.json();
+        })
+        .then(data => {
+            // 将API返回的数据保存到publicationsData
+            publicationsData = data;
+            
+            // 初始化年份和类型过滤器
+            setupYearFilters();
+            setupTypeFilters();
+            
+            // 渲染所有部分
+            renderAllSections();
+        })
+        .catch(error => {
+            console.error('获取数据失败:', error);
+            // 加载失败时显示错误信息
+            document.getElementById('papers-list').innerHTML = `
+                <div class="text-center text-gray-500 py-8">
+                    <i class="fas fa-exclamation-circle text-3xl mb-4"></i>
+                    <p>加载数据失败，请稍后重试。</p>
+                    <p class="text-sm mt-2">错误信息: ${error.message}</p>
+                </div>
+            `;
+        });
         
-        // 初始渲染
-        renderAllSections();
-        
-        // 设置加载更多按钮的点击事件
+        // 设置加载更多按钮事件
         setupLoadMoreButtons();
-        
-        // 设置年份筛选器
-        setupYearFilters();
-        
-        // 设置论文类型筛选器
-        setupTypeFilters();
         
         // 监听语言切换
         document.addEventListener('languageChanged', (e) => {
             currentLang = e.detail.language;
             renderAllSections();
         });
+        
     } catch (error) {
-        console.error('加载出版物数据失败:', error);
+        console.error('初始化数据失败:', error);
     }
 }
 
